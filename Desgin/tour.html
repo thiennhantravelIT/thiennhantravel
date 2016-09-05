@@ -19,12 +19,120 @@
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="thiennhantravel"/>
     <link href="css/TN.tour.css" rel=stylesheet />
-	
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap/bootstrap.min.js"></script>
 </head>
 <body data-page="homepage" class="homePage">
 	<header>
 	</header>
-	<div class="main-content"></div>
+	<div class="main-content">
+        <div class="col-xs-3 nopadleft tour-search">
+            <div class="tour-search-section">
+                <h3 class="nomartop">Tìm Tours</h3>
+                <div class="row norow search-section">
+                    <h5>Bạn muốn đi du lịch đến:</h5>
+                    <form class="search-form" action="" method="post">
+                        <input type="text" name="typesearch" class="typesearch form-control" placeholder="Nhập điểm đến" />
+                        <button type="button" class="btn btn-search" id="searchButton"><i class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="sepa"></div>
+            <div class="tour-search-section">
+                <h3 class="nomartop">Chọn địa điểm</h3>
+                <div class="row norow search-section">
+                   <ul class="row norow nopadleft location-search">
+                       <li><a href=""><i class="glyphicon glyphicon-map-marker"></i>Đà Lạt</a></li>
+                       <li><a href=""><i class="glyphicon glyphicon-map-marker"></i>Nha Trang</a></li>
+                       <li><a href=""><i class="glyphicon glyphicon-map-marker"></i>Đà Nẵng</a></li>
+                       <li><a href=""><i class="glyphicon glyphicon-map-marker"></i>Vũng Tàu</a></li>
+                       <li><a href=""><i class="glyphicon glyphicon-map-marker"></i>Phan Thiết</a></li>
+                       <li><a href=""><i class="glyphicon glyphicon-map-marker"></i>Hạ Long</a></li>
+                       <li><a href=""><i class="glyphicon glyphicon-map-marker"></i>Sapa</a></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-9 tour-content nopadright">
+            <div class="row norow each-tour">
+                <div class="col-xs-3 thumb nopadding"><img src="sass/tour/images/thumbnail.jpg" /></div>
+                <div class="col-xs-9 nopadright">
+                    <h3 class="nomartop">Tour du lịch tại công ty Thiên Nhân Travel</h3>
+                    <div class="text-justify excerpt">Thông tin giới thiệu tour du lịch tại công ty du lịch Thiên Nhân - Thien Nhan Travel. Tour được tổ chức chuyên nghiệp mang lại sự hài lòng và những trải nghiệm đáng nhớ cho quý khách.</div>
+                    <div class="row norow transport text-center">
+                        <span class="tour-type"><i class="glyphicon glyphicon-time"></i> Trong Ngày</span>
+                        <span class="tour-transport"><i class="glyphicon glyphicon-send"></i> Phương tiện: Máy bay, Ô tô</i></span>
+                    </div>
+                    <div class="row norow tour-info">Giá 1 khách <strong>1.550.000</strong><span>VND<span><a href="">Xem chi tiết</a></div>
+                </div>
+            </div>
+             <div class="row norow each-tour">
+                <div class="col-xs-3 thumb nopadding"><img src="sass/tour/images/thumbnail.jpg" /></div>
+                <div class="col-xs-9 nopadright">
+                    <h3 class="nomartop">Tour du lịch tại công ty Thiên Nhân Travel</h3>
+                    <div class="text-justify excerpt">Thông tin giới thiệu tour du lịch tại công ty du lịch Thiên Nhân - Thien Nhan Travel. Tour được tổ chức chuyên nghiệp mang lại sự hài lòng và những trải nghiệm đáng nhớ cho quý khách.</div>
+                    <div class="row norow transport text-center">
+                        <span class="tour-type"><i class="glyphicon glyphicon-time"></i> Trong Ngày</span>
+                        <span class="tour-transport"><i class="glyphicon glyphicon-send"></i> Phương tiện: Máy bay, Ô tô</i></span>
+                    </div>
+                    <div class="row norow tour-info">Giá 1 khách <strong>1.550.000</strong><span>VND<span><a href="">Xem chi tiết</a></div>
+                </div>
+            </div>
+             <div class="row norow each-tour">
+                <div class="col-xs-3 thumb nopadding"><img src="sass/tour/images/thumbnail.jpg" /></div>
+                <div class="col-xs-9 nopadright">
+                    <h3 class="nomartop">Tour du lịch tại công ty Thiên Nhân Travel</h3>
+                    <div class="text-justify excerpt">Thông tin giới thiệu tour du lịch tại công ty du lịch Thiên Nhân - Thien Nhan Travel. Tour được tổ chức chuyên nghiệp mang lại sự hài lòng và những trải nghiệm đáng nhớ cho quý khách.</div>
+                    <div class="row norow transport text-center">
+                        <span class="tour-type"><i class="glyphicon glyphicon-time"></i> Trong Ngày</span>
+                        <span class="tour-transport"><i class="glyphicon glyphicon-send"></i> Phương tiện: Máy bay, Ô tô</i></span>
+                    </div>
+                    <div class="row norow tour-info">Giá 1 khách <strong>1.550.000</strong><span>VND<span><a href="">Xem chi tiết</a></div>
+                </div>
+            </div>
+             <div class="row norow each-tour">
+                <div class="col-xs-3 thumb nopadding"><img src="sass/tour/images/thumbnail.jpg" /></div>
+                <div class="col-xs-9 nopadright">
+                    <h3 class="nomartop">Tour du lịch tại công ty Thiên Nhân Travel</h3>
+                    <div class="text-justify excerpt">Thông tin giới thiệu tour du lịch tại công ty du lịch Thiên Nhân - Thien Nhan Travel. Tour được tổ chức chuyên nghiệp mang lại sự hài lòng và những trải nghiệm đáng nhớ cho quý khách.</div>
+                    <div class="row norow transport text-center">
+                        <span class="tour-type"><i class="glyphicon glyphicon-time"></i> Trong Ngày</span>
+                        <span class="tour-transport"><i class="glyphicon glyphicon-send"></i> Phương tiện: Máy bay, Ô tô</i></span>
+                    </div>
+                    <div class="row norow tour-info">Giá 1 khách <strong>1.550.000</strong><span>VND<span><a href="">Xem chi tiết</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="clear row norow quick-location">
+            <h3>Tours</h3>
+            <ul class="row nopadleft">
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Đà Lạt</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Nha Trang</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Phan Thiết</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Bình Ba</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Bình Hưng</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Hồ Chí Minh</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Đà Nẵng</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Phú Quốc</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Kiên Giang</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Vũng Tàu</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Miền Trung</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Hội An</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Huế</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Phú Yên</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Quy Nhơn</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Miền Bắc</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Hạ Long</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Hà Nội</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Sapa</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Buôn Mê Thuột</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Miền Nam</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Quảng Ngãi</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Nam Du</a></li>
+                <li class="col-xs-2"><a href=""><i class="glyphicon glyphicon-map-marker"></i> Tour Côn Đảo</a></li>
+            </ul>
+        </div>
+    </div>
 	<footer>
 	</footer>
 </body>

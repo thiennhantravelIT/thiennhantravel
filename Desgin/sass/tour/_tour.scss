@@ -1,4 +1,40 @@
 body{
-    color: #fff;
-    background: #456;
+   background: #F1F1F1 !important;
+}
+li{list-style: none;}
+.clear{clear:both;}
+.norow{margin-left:0 !important; margin-right:0 !important;}
+.main-content{width:1200px; margin:auto;}
+.nopadding{padding-left: 0 !important; padding-right: 0 !important;}
+.nopadleft{padding-left: 0 !important;}
+.nopadright{padding-right: 0 !important;}
+.thumb img{max-width: 100%;}
+.nomartop{margin-top: 0 !important;}
+.sepa{height:20px; width:100%;}
+.each-tour{padding:15px; background: #fff; margin-bottom:15px;}
+.tour-search h3{padding:10px; background: #940408; font-size: 18px; color:#fff;}
+.tour-search-section{background: #fff;}
+.search-section{padding:10px 10px 20px 10px;}
+.typesearch{border:1px solid #ccc; padding:5px;}
+.search-form{position: relative;
+    button{position: absolute; top: 0; right: 0; background: #940408; color: #fff;}
+}
+.location-search{
+    li a{display: block; padding: 5px; color:#222; font-size:16px;
+        i{padding-right:5px;}
+    }
+    li a:hover{ color: #940408; }
+}
+ .tour-info{ color:#999;
+     a{float:right; background: #940408; color:#fff; padding:5px 10px;}
+     a:hover{color:#fff;}
+     span{color:#940408;}
+     strong{font-size:24px; color:#940408;}
+ }
+.excerpt{font-size:16px;}
+.tour-type{padding-right:20px;}
+.quick-location{background: #fff; border: 1px solid #fbfbfb; padding:10px;
+    h3{color:#940408; font-weight:bold; font-size:20px;}
+    ul li a{display:block; padding:5px 0; color:#888; font-size:14px;}
+    ul li a:hover{color:#940408;}
 }
