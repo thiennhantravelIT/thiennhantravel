@@ -1,0 +1,19 @@
+body{
+   background: #F1F1F1 !important;
+}
+li{list-style: none;}
+.clear{clear:both;}
+.norow{margin-left:0 !important; margin-right:0 !important;}
+.main-content{width:1200px; margin:auto;}
+.nopadding{padding-left: 0 !important; padding-right: 0 !important;}
+.nopadleft{padding-left: 0 !important;}
+.nopadright{padding-right: 0 !important;}
+.thumb img{max-width: 100%; display:block; margin:auto;}
+.nomartop{margin-top: 0 !important;}
+.single-title{ font-size:27px; padding:10px; font-weight: bold; }
+.single-tour{ background: #fff;
+    h3{padding:0 10px;}
+    .single-tour-info, .single-tour-content{padding:10px;}
+    .single-tour-info span{padding:3px 30px 3px 0; font-size:15px;}
+    .single-tour-content{font-size:16px;}
+}
