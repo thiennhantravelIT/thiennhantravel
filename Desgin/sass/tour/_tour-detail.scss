@@ -35,3 +35,17 @@ li{list-style: none;}
         &:hover, &.active{border-bottom: #940408 1px solid; color:#940408;}
     }
 }
+.ref-tour{background: #fff; margin-top:20px; padding-bottom: 15px;
+    .ref-title{background: #940408; color:#fff; padding:7px 10px; font-size:18px;}
+    h2{font-size: 18px; 
+        a{ color:#940408; }
+    }
+    .each-ref-tour{ 
+        .each-ref-info{padding:10px; border:1px solid #ccc;
+            span{padding:5px 0; display:block}
+        }
+        h3{color:#940408; font-size: 22px;
+            span{font-size:16px;}
+        }
+    }
+}
