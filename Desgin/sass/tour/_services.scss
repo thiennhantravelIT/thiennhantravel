@@ -1,0 +1,28 @@
+body{
+   background: #F1F1F1 !important;
+}
+li{list-style: none;}
+.clear{clear:both;}
+.norow{margin-left:0 !important; margin-right:0 !important;}
+.main-content{width:1200px; margin:auto;}
+.nopadding{padding-left: 0 !important; padding-right: 0 !important;}
+.nopadleft{padding-left: 0 !important;}
+.nopadright{padding-right: 0 !important;}
+.thumb img{max-width: 100%;}
+.nomartop{margin-top: 0 !important;}
+.sepa{height:20px; width:100%;}
+.services{ background: #fff; padding:10px;
+    h1{font-size:22px; color:#940408;}
+    .each-services{ margin-bottom:15px; border-bottom:1px dotted #ccc; padding-bottom:15px;
+        h2{font-size:20px; color:#940408;}
+        h4{font-size:16px;}
+        h3{color:#940408;}
+    }
+}
+.tours-list{
+    background: #fff;
+    h3{color:#fff; background: #940408; padding:10px;}
+    ul li a{display: block; padding:6px 5px; color:#222; font-size:16px; border-bottom: 1px solid #eee;
+        &:hover{color:#940408;}
+    }
+}
