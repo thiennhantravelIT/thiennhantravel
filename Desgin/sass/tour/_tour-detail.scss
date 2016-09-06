@@ -17,4 +17,21 @@ li{list-style: none;}
     .single-tour-info span{padding:3px 30px 3px 0; font-size:15px;}
     .single-tour-content{font-size:16px;}
 }
-.price-tour{color:red; font-weight: bold; background: #f4f4f4;}
+.fixp{position:fixed; top:0; width: 385px;}
+.price-tour{ background: #940408; color:#fff; padding:10px;
+    label{font-weight: normal;}
+    h2{
+        strong{font-size:25px;}
+        span{font-size:18px;}
+    }
+    .form-group{margin-top: 15px;}
+    .col-xs-9 i{position: absolute; top:10px; right:10px; color: #940408;}
+    .dattour{background: #FECA0A; display: block; color:#777; padding:10px; text-align: center;  text-decoration: none; font-size: 18px;
+        &:hover{color:#111; cursor:pointer;}
+    }
+}
+.quick-view{ background: #fff; padding-top:30px; font-size:16px; text-transform: uppercase;
+    li{display: block; padding:10px; border-bottom: 1px solid #eee; cursor: pointer;
+        &:hover, &.active{border-bottom: #940408 1px solid; color:#940408;}
+    }
+}
