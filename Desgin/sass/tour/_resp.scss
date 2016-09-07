@@ -1,24 +1,49 @@
-body{
-   background: #F1F1F1 !important;
+/*Responsive*/
+/*----------*/
+@media screen and (max-width:1300px){ 
+	
+	
 }
-li{list-style: none;}
-.clear{clear:both;}
-.norow{margin-left:0 !important; margin-right:0 !important;}
-.main-content{width:1200px; margin:auto;}
-.nopadding{padding-left: 0 !important; padding-right: 0 !important;}
-.nopadleft{padding-left: 0 !important;}
-.nopadright{padding-right: 0 !important;}
-.thumb img{max-width: 100%;}
-.nomartop{margin-top: 0 !important;}
-.sepa{height:20px; width:100%;}
-.about-us{ background: #fff; padding:10px;
-    h1{font-size:22px; color:#940408;}
-    .about-us-content{font-size: 16px;}
+@media screen and (max-width:1093px){ 
+	
 }
-.page-list{
-    background: #fff;
-    h3{color:#fff; background: #940408; padding:10px;}
-    ul li a{display: block; padding:6px 5px; color:#222; font-size:16px; border-bottom: 1px solid #eee;
-        &:hover{color:#940408;}
+
+
+/*smaller then 1024*/
+@media screen and (max-width:1024px){
+    .main-content{width:100%;}
+}
+
+/*May tinh bang chieu dung
+smaller than 770
+*************************************************************************************/
+@media screen and (max-width: 800px) {
+	.main-content, .tour-search, .tour-content{width:100% !important;}
+    .each-tour{
+        .col-xs-3, .col-xs-9{width:100% !important;}
     }
+    .quick-location ul li{width:50% !important;}
+    .transport span{display: block;}
+}
+/************************************************************************************
+smaller than 580
+*************************************************************************************/
+@media screen and (max-width: 625px) {	
+	
+}
+
+/************************************************************************************
+smaller than 490
+*************************************************************************************/
+@media screen and (max-width: 505px) {
+	
+}
+/************************************************************************************
+smaller than 360
+*************************************************************************************/
+@media screen and (max-width: 375px) {
+	
+}
+@media screen and (max-width: 320px) {
+	
 }

@@ -8,10 +8,14 @@ li{list-style: none;}
 .nopadding{padding-left: 0 !important; padding-right: 0 !important;}
 .nopadleft{padding-left: 0 !important;}
 .nopadright{padding-right: 0 !important;}
-.thumb img{max-width: 100%;}
+.thumb img{max-width: 100%; display:block; margin: auto;}
 .nomartop{margin-top: 0 !important;}
 .sepa{height:20px; width:100%;}
-.each-tour{padding:15px; background: #fff; margin-bottom:15px;}
+.each-tour{padding:15px; background: #fff; margin-bottom:15px;
+    h3 a{color:#222;
+        &:hover{color: #940408; text-decoration: none;}
+    }
+}
 .tour-search h3{padding:10px; background: #940408; font-size: 18px; color:#fff;}
 .tour-search-section{background: #fff;}
 .search-section{padding:10px 10px 20px 10px;}
