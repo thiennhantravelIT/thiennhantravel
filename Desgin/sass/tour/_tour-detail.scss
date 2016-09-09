@@ -32,7 +32,7 @@ li{list-style: none;}
 }
 .quick-view{ background: #fff; padding-top:30px; font-size:16px; text-transform: uppercase;
     li{display: block; padding:10px; border-bottom: 1px solid #eee; cursor: pointer;
-        &:hover, &.active{border-bottom: #940408 1px solid; color:#940408;}
+        &:hover, &.active{border-bottom: #940408 2px solid; color:#940408; font-weight: bold;}
     }
 }
 .ref-tour{ margin-top:20px; padding-bottom: 15px;
