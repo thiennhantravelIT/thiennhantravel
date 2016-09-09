@@ -19,6 +19,7 @@ smaller than 770
 *************************************************************************************/
 @media screen and (max-width: 800px) {
 	.main-content, .tour-search, .tour-content, .single-content, .sidebar-detail, .service-page, .service-sidebar, .each-services .col-xs-3, .each-services .col-xs-9, .page-content, .page-sidebar{width:100% !important;}
+    .tour-quick-locate{display:none;}
     .each-tour{
         .col-xs-3, .col-xs-9{width:100% !important;}
     }

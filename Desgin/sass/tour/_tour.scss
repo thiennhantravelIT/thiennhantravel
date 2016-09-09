@@ -42,3 +42,11 @@ li{list-style: none;}
     ul li a{display:block; padding:5px 0; color:#888; font-size:14px;}
     ul li a:hover{color:#940408;}
 }
+/*========*/
+.respdata{
+    position: absolute; width: 100%; background:#fff; border:#ddd 1px solid; padding:10px; z-index: 1;
+    li{
+        a{ display:block; padding:5px 0; color:#111;}
+        strong, i{color: #940408;}
+    }
+}
