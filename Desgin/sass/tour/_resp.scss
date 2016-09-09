@@ -1,11 +1,11 @@
 /*Responsive*/
 /*----------*/
 @media screen and (max-width:1300px){ 
-	
+	.main-content{width:100%;}
 	
 }
 @media screen and (max-width:1093px){ 
-	
+	.main-content{width:100%;}
 }
 
 
@@ -18,25 +18,30 @@
 smaller than 770
 *************************************************************************************/
 @media screen and (max-width: 800px) {
-	.main-content, .tour-search, .tour-content{width:100% !important;}
+	.main-content, .tour-search, .tour-content, .single-content, .sidebar-detail, .service-page, .service-sidebar, .each-services .col-xs-3, .each-services .col-xs-9, .page-content, .page-sidebar{width:100% !important;}
     .each-tour{
         .col-xs-3, .col-xs-9{width:100% !important;}
     }
     .quick-location ul li{width:50% !important;}
     .transport span{display: block;}
+    .page-sidebar{margin-top: 15px;}
 }
 /************************************************************************************
 smaller than 580
 *************************************************************************************/
 @media screen and (max-width: 625px) {	
-	
+	.ref-tour .ref-tour-part{width:100% !important; }
+    .single-tour-info span{display:block;}
+    .ref-tour .ref-tour-part, .page-sidebar{margin-top: 15px;}
 }
 
 /************************************************************************************
 smaller than 490
 *************************************************************************************/
 @media screen and (max-width: 505px) {
-	
+	.ref-tour .ref-tour-part{width:100% !important; }
+    .single-tour-info span{display:block;}
+    .ref-tour .ref-tour-part, .page-sidebar{margin-top: 15px;}
 }
 /************************************************************************************
 smaller than 360
