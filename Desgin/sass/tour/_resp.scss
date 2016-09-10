@@ -21,10 +21,14 @@ smaller than 770
 	.main-content, .tour-search, .tour-content, .single-content, .sidebar-detail, .service-page, .service-sidebar, .each-services .col-xs-3, .each-services .col-xs-9, .page-content, .page-sidebar{width:100% !important;}
     .tour-quick-locate{display:none;}
     .each-tour{
-        .col-xs-3, .col-xs-9{width:100% !important;}
+        .col-xs-3, .col-xs-9{width:100% !important; padding-left: 0 !important;}
+        h3, h2{padding-top: 10px;}
+    }
+    .each-services{
+        .col-xs-9{ padding-left: 0 !important; }
+        h2{padding-top: 10px;}
     }
     .quick-location ul li{width:50% !important;}
-    .transport span{display: block;}
     .page-sidebar{margin-top: 15px;}
 }
 /************************************************************************************
