@@ -25,62 +25,7 @@
     <link href="css/TN.resp.css" rel=stylesheet />
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/datepicker.css" rel="stylesheet" />
-    <script type="text/javascript">
-        jQuery(document).ready(function($){
-            var nowTemp = new Date();
-            var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
-            var checkin = $('#arrival').datepicker({
-                format:'dd/mm/yyyy',
-                onRender: function(date) {
-                    return date.valueOf() < now.valueOf() ? 'disabled' : '';
-                }
-            }).on('changeDate',function(ev){
-                $('.datepicker').hide();
-            });
-            ////==========//////
-            $('.quick-view li').click(function(){
-                 $('.quick-view li').removeClass('active');
-                var scr = $(this).attr('id');
-                $('html,body').animate({ scrollTop: $('.'+scr).offset().top },'500');
-                $(this).addClass('active');
-            });
-			//===========//
-			wd = $(window).width();
-			if(wd<800){
-				$('.sidebar-detail').insertAfter('.single-tour-info');
-			}
-            //=============//
-            $(window).scroll(function(){
-                if($(this).scrollTop() > 200 && wd >800 ){
-                    $('.excerpt-tour').addClass('fixp');
-                    var h = $('.single-tour').height();
-                    if($(this).scrollTop() > h-420){
-                        $('.excerpt-tour').removeClass('fixp');
-                    }
-                }
-                if($(this).scrollTop() < 200 ){
-                    $('.excerpt-tour').removeClass('fixp');
-                }
-                //---//
-                $('.single-tour-content div.scr').each(function(){
-                    var id = $(this).attr('id'), t = $('#'+id).offset().top, h = $('#'+id).outerHeight(), wh = $(window).height(), ws = $(window).scrollTop();
-                    if(ws > (t+h-wh)){
-                        $('.quick-view li').removeClass('active');
-                        $('#'+id+'ctr').addClass('active');
-                    }
-                });
-
-            });
-			//==============//
-			$('.dktab li').click(function(){
-				$('.dktab li').removeClass('dkactive');
-				$(this).addClass('dkactive');
-				id = $(this).attr('data-id');
-				$('#baogom, #khongbaogom, #phuthu').css({'display':'none'});
-				$('#'+id).stop().fadeIn(500);
-			});
-        });
-    </script>
+	<script src="js/tours/tours.js"></script>
 </head>
 <body data-page="homepage" class="homePage">
 	<header>
