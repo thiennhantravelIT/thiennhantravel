@@ -31,7 +31,7 @@ smaller than 770
 smaller than 580
 *************************************************************************************/
 @media screen and (max-width: 625px) {	
-	.ref-tour .ref-tour-part{width:100% !important; }
+	.ref-tour .ref-tour-part, .dvdikemctr .col-xs-4{width:100% !important; }
     .single-tour-info span{display:block;}
     .ref-tour .ref-tour-part, .page-sidebar{margin-top: 15px;}
 }
@@ -40,7 +40,7 @@ smaller than 580
 smaller than 490
 *************************************************************************************/
 @media screen and (max-width: 505px) {
-	.ref-tour .ref-tour-part{width:100% !important; }
+	.ref-tour .ref-tour-part, , .dvdikemctr .col-xs-4{width:100% !important; }
     .single-tour-info span{display:block;}
     .ref-tour .ref-tour-part, .page-sidebar{margin-top: 15px;}
 }

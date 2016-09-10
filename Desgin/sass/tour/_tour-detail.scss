@@ -12,10 +12,22 @@ li{list-style: none;}
 .nomartop{margin-top: 0 !important;}
 .single-title{ font-size:27px; padding:10px; font-weight: bold; }
 .single-tour{ background: #fff;
-    h3{padding:0 10px;}
-    .single-tour-info, .single-tour-content{padding:10px;}
+    h3{padding:0 10px; color:#940408;}
+    .single-tour-info{padding:10px;}
     .single-tour-info span{padding:3px 30px 3px 0; font-size:15px;}
-    .single-tour-content{font-size:16px;}
+    .single-tour-content{font-size:16px; padding:20px; line-height: 1.5em;
+        img{padding:20px 0;}
+        .scr{padding-bottom: 20px;}
+        .dvdikemctr .col-xs-4{padding:10px;}
+        .dieukhoanctr{
+            ul{ border-bottom:1px solid #ddd; padding-left: 0;
+                li{ display: inline-block; padding:5px 15px; border-bottom: 1px solid #ddd; margin-bottom: -1px; border-right: 1px solid #fff; border-top: 1px solid #fff; border-left: 1px solid #fff;
+                    &.dkactive, &:hover{border-bottom: 1px solid #fff; border-right: 1px solid #ddd; border-top: 1px solid #ddd; border-left: 1px solid #ddd; cursor:pointer; }
+                }
+            }
+            #khongbaogom, #phuthu{ display: none; }
+        }
+    }
 }
 .fixp{position:fixed; top:0; width: 385px;}
 .price-tour{ background: #940408; color:#fff; padding:10px;
