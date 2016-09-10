@@ -44,9 +44,13 @@
                 $('html,body').animate({ scrollTop: $('.'+scr).offset().top },'500');
                 $(this).addClass('active');
             });
+			//===========//
+			wd = $(window).width();
+			if(wd<800){
+				$('.sidebar-detail').insertAfter('.single-tour-info');
+			}
             //=============//
             $(window).scroll(function(){
-                wd = $(window).width();
                 if($(this).scrollTop() > 200 && wd >800 ){
                     $('.excerpt-tour').addClass('fixp');
                     var h = $('.single-tour').height();
@@ -67,6 +71,14 @@
                 });
 
             });
+			//==============//
+			$('.dktab li').click(function(){
+				$('.dktab li').removeClass('dkactive');
+				$(this).addClass('dkactive');
+				id = $(this).attr('data-id');
+				$('#baogom, #khongbaogom, #phuthu').css({'display':'none'});
+				$('#'+id).stop().fadeIn(500);
+			});
         });
     </script>
 </head>
@@ -75,119 +87,141 @@
 	</header>
 	<div class="main-content">
         <h1 class="row norow nomartop single-title">Tour du lịch tại công ty Thiên Nhân Travel</h1>
-        <div class="row norow">
-        <div class="col-xs-8 single-content"><div class="single-tour">
-            <div class="clear thumb">
-                <img src="sass/tour/images/singletour.jpg" />
-                <div class="single-tour-info">
-                    <span><i class="glyphicon glyphicon-map-marker"></i> Hà Nội</span>
-                    <span><i class="glyphicon glyphicon-time"></i> 3 Ngày 2 Đêm</span>
-                    <span><i class="glyphicon glyphicon-send"></i> Phương tiện: Ô tô</i></span>
-                    <span><i class="glyphicon glyphicon-file"></i> khởi hành: thứ 6 hàng tuần</span>
-                </div>
-                <div class="single-tour-content text-justify">
-                    <div class="lichtrinhctr scr" id="lichtrinh">
-                        <h3>LỊCH TRÌNH</h3>
-                        <div class="abc">Thong tin demo coi thu</div>
-                    NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                       NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                    </div>
-                 <div class="dvdikemctr scr" id="dvdikem">
-                     <h3>DỊCH VỤ ĐI KÈM</h3>
-                    NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                       NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                 </div>
-                 <div class="dieukhoanctr scr" id="dieukhoan">
-                     <h3>ĐIỀU KHOẢN</h3>
-                    NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                       NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                    </div>
-                 <div class="chinhsachctr scr" id="chinhsach">
-                 <h3>CHÍNH SÁCH ĐỔI/HỦY TOUR</h3>
-                    NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                       NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                    </div>
-                 <div class="luuyctr scr" id="luuy">
-                     <h3>LƯU Ý</h3>
-                    NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                       NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                   NGÀY 1 (THỨ 6): HÀ NỘI - HÀ GIANG - QUẢNG BẠ - YÊN MINH (ĂN TRƯA,TỐI)
-                    - 05h30: Xe và hướng dẫn viên công ty du lịch  đón quý khách tại điểm hẹn trong thành phố khởi hành đi Tuyên Quang (138 km), trên đường đoàn dừng chân nghỉ ngơi ăn sáng (chi phí tự túc), sau đó tiếp tục hành trình đi Hà Giang.
-                </div>
-                </div>
-            </div>
-        </div></div>
-        <div class="col-xs-4 sidebar-detail">
-            <div class="excerpt-tour">
-                <div class="price-tour">
-                    <h2>1,500,000<span> VND</span></h2>
-                    <div class="row norow form-group">
-                        <label class="col-xs-3 nopadding">Ngày nhận:</label>
-                        <div class="col-xs-9 nopadright"><input type="text" class="form-control arrival" id="arrival" placeholder="Ngày khởi hành" name="arrival" /><i class="glyphicon glyphicon-calendar"></i></div>
-                    </div>
-                    <div class="row norow form-group">
-                        <label class="col-xs-3 nopadding">Số khách:</label>
-                        <div class="col-xs-9 nopadright"><input type="text" class="form-control no-customer" id="no-customer" placeholder="Số lượng người" name="no-customer" /><i class="glyphicon glyphicon-user"></i></div>
-                    </div>
-                    <a class="dattour" id="dattour">ĐẶT TOUR</a>
-                </div>
-                <div class="quick-view">
-                    <li id="lichtrinhctr">Lịch trình</li>
-                    <li id="dvdikemctr">Dịch vụ đi kèm</li>
-                    <li id="dieukhoanctr">Điều khoản</li>
-                    <li id="chinhsachctr">Chính sách đổi/hủy tour</li>
-                    <li id="luuyctr">Lưu ý</li>
-                </div>
-            </div>
-        </div>
+        <div class="row norow single-tour-page">
+			<div class="col-xs-8 single-content"><div class="single-tour">
+				<div class="clear thumb">
+					<img src="sass/tour/images/singletour.jpg" />
+					<div class="single-tour-info">
+						<span><i class="glyphicon glyphicon-map-marker"></i> Hà Nội</span>
+						<span><i class="glyphicon glyphicon-time"></i> 3 Ngày 2 Đêm</span>
+						<span><i class="glyphicon glyphicon-send"></i> Phương tiện: Ô tô</i></span>
+						<span><i class="glyphicon glyphicon-file"></i> khởi hành: thứ 6 hàng tuần</span>
+					</div>
+					<div class="thumb"><img src="sass/tour/images/sepa.png" /></div>
+					<div class="single-tour-content text-justify">
+						<div class="row norow lichtrinhctr scr" id="lichtrinh">
+							<h3><i class="glyphicon glyphicon-play-circle"></i> LỊCH TRÌNH TOUR</h3>
+							<p>Sáng 8h20’ – 8h40’ xe và hướng dẫn viên sẽ đón quý khách tại khách sạn quý khách lưu trú, bắt đầu khởi hành chương trình tham quan.</p>
+							<img src="https://cdn2.ivivu.com/2015/09/09/17/da-lat.jpg" />
+							<p><strong>8h45’: Dinh Bảo Đại</strong> - Ngôi dinh thự cổ được chính vua Bảo Đại – vị vua cuối cùng của Việt Nam xây dựng để nghỉ ngơi và làm việc tại Đà Lạt, được nhà nước xếp hạng di tích quốc gia.</p>
+							<p><strong>8h45’: Cáp treo và Đồi vọng cảnh</strong> - Ngọn đồi cao 1500m so với mực nước biển để quý khách có thể ngắm toàn cảnh thành phố Đà Lạt. Có hệ thống cáp treo dài 2300m đưa quý khách thăm ngôi chùa lớn nhất Đà Lạt ( Chi phí cáp treo tự túc, nếu không muốn đi cáp treo quý khách có thể đi bằng xe tour).</p>
+							<p><strong>9h10’: Thiền viện Trúc Lâm – hồ Tuyền Lâm</strong> - Ngôi chùa lớn xây dựng năm 1993 theo Thiền Tông, rộng 24 hecta, cảnh quan đẹp nhìn xuống khu du lịch hồ Tuyền Lâm.</p>
+							<img src="https://cdn2.ivivu.com/2015/09/09/17/da-lat-4.jpg" />
+							<p><strong>15h00’: Nhà thờ Domain De Marie</strong> - Ngôi nhà thờ được xây dựng từ những năm 1938 với kiến trúc đẹp, được phu nhân quan toàn quyền Đông Dương Jean Decoux ủng hộ nhiều tâm huyết, đây cũng là nơi lưu giữ phần mộ của bà.</p>
+							<p>16h00’: Về lại khách sạn - Chia tay quý khách, kết thúc chương trình tour.</p>
+						</div>
+						<div class="row norow dvdikemctr scr" id="dvdikem">
+							<h3><i class="glyphicon glyphicon-play-circle"></i> DỊCH VỤ ĐI KÈM</h3>
+							<div class="col-xs-4"><i class="glyphicon glyphicon-check"></i> Bảo hiểm</div>
+							<div class="col-xs-4"><i class="glyphicon glyphicon-check"></i> Bữa ăn</div>
+							<div class="col-xs-4"><i class="glyphicon glyphicon-check"></i> Hướng dẫn viên</div>
+							<div class="col-xs-4"><i class="glyphicon glyphicon-check"></i> Vé tham quan</div>
+							<div class="col-xs-4"><i class="glyphicon glyphicon-check"></i> Xe đưa đón</div>
+						</div>
+						<div class="row norow dieukhoanctr scr" id="dieukhoan">
+							<h3><i class="glyphicon glyphicon-play-circle"></i> ĐIỀU KHOẢN</h3>
+							<ul class="row norow dktab">
+								<li class="dkactive" data-id="baogom">Bao gồm</li>
+								<li data-id="khongbaogom">Không bao gồm</li>
+								<li data-id="phuthu">Phụ thu</li>
+							</ul>
+							<div class="row norow" id="baogom">
+								<p>– Vé máy bay khứ hồi TP.Đà Lạt – HÀ NỘI – TP.Đà Lạt (Jetstar Pacific, Vietjet Air)</p>
+								<p>– Xe du lịch đời mới máy lạnh đưa đón suốt chuyến</p>
+								<p>– Khách sạn 3 sao tại Hà Nội: Cosiana, First Eden, Moonview, Larosa, …hoặc tương đương.</p>
+								<p>– Khách sạn 3 sao tại Sapa: Panorama, Bamboo, Cosianna, Royal, …hoặc tương đương.(hoặc các khách sạn tương đương) đầy đủ tiện nghi 2 khách người lớn/ phòng.</p>
+								<p>– Nếu lẻ người thứ 3, đóng phụ phí phòng đơn hoặc ngủ ghép phòng 3 khách</p>
+								<p>– Ăn uống theo chương trình:</p>
+								<p>– Ăn phụ: 3 bữa sáng tại khách sạn.</p>
+								<p>– Ăn chính: 7 bữa chính tiêu chuẩn 120.000 đồng/bữa.</p>
+								<p>– Vé tham quan theo chương trình.</p>
+								<p>– Hướng dẫn viên tiếng Việt vui vẻ nhiệt tình suốt chuyến đi.</p>
+								<p>– Bảo hiểm với mức bồi thường tối đa 30.000.000 đồng/trường hợp.</p>
+								<p>– Quà tặng: nón du lịch Việt, nước, khăn lạnh.</p>
+							</div>
+							<div class="row norow" id="khongbaogom">
+								<p>- Bia hay nước ngọt trong các bữa ăn.</p>
+								<p>- Vé tham quan & các trò chơi tại KDL Đảo Tuần Châu.</p>
+								<p>- Chi phí cá nhân: điện thoại, giặt ủi…</p>
+								<p>- Chi phí cáp treo Yên Tử, PHAN – XI – PĂNG.</p>
+								<p>- Thuế VAT</p>
+							</div>
+							<div class="row norow" id="phuthu">
+								<p>– Trẻ em dưới 02 tuổi: miễn phí giá tour, giá vé máy bay theo quy định hãng hàng không. Cha, Mẹ hoặc người thân đi kèm tự lo các chi phí ăn, ngủ, tham quan (nếu có) cho bé.</p>
+								<p>– Trẻ em từ 02 – dưới 05 tuổi : 100% giá vé máy bay; miễn giá tour. Cha, Mẹ hoặc người thân đi kèm tự lo các chi phí ăn, ngủ, tham quan (nếu có) cho bé. Hai người lớn chỉ kèm 1 trẻ em dưới 5 tuổi, trẻ em thứ 2 trở lên phải mua ½ vé tour.</p>
+								<p>– Trẻ em từ 05 – dưới 11 tuổi: 100% giá vé máy bay; 50% giá tour. Bao gồm các dịch vụ ăn uống, ghế ngồi trên xe và ngủ chung với gia đình. Hai người lớn chỉ được kèm 1 trẻ em từ 5 đến dưới 11 tuổi, trẻ em thứ 2 trở lên Cha, Mẹ mua thêm 1 suất giường đơn hoặc 1 vé người lớn.</p>
+								<p>– Trẻ em từ 11 tuổi trở lên: 100% giá tour và tiêu chuẩn như người lớn.</p>
+							</div>
+						</div>
+						<div class="row norow chinhsachctr scr" id="chinhsach">
+							<h3><i class="glyphicon glyphicon-play-circle"></i> CHÍNH SÁCH ĐỔI/HỦY TOUR</h3>
+							<p>– Lịch trình các điểm tham quan trong chương trình có thể được thay đổi, sắp xếp theo tình hình tham quan thực tế tại địa phương nhưng vẫn đảm bảo đầy đủ các điểm theo chương trình.</p>
+							<p>– Chương trình tour là du lịch trọn gói kết hợp tham quan mua sắm, khách hàng không tự ý tách đoàn, các dịch vụ không sử dụng sẽ không được hoàn lại. Các chi phí phát sinh (nếu có) do khách hàng tự thanh toán.</p>
+							<p>– Chương trình có thể thay đổi tùy thuộc vào lịch bay của Hãng Hàng Không và tình hình khách sạn tại các nơi đoàn đến. Trong những trường hợp khách quan như: đình công, khủng bố, thiên tai, thời hạn cấp visa của Lãnh Sự quán hoặc do thay đổi lịch trình của các phương tiện vận chuyển công cộng như: máy bay, tàu hỏa… thì Công ty Du lịch Thiên Nhân Travel sẽ giữ quyền thay đổi lộ trình vì sự thuận tiện, an toàn cho khách hàng và sẽ miễn trừ trách nhiệm bồi thường những thiệt hại phát sinh</p>
+							<p>– Công ty chúng tôi không chịu trách nhiệm trong trường hợp khách tham gia đoàn vi phạm vào các điều khoản quy định về thủ tục xuất nhập cảnh hoặc bị từ chối nhập cảnh theo quyết định của chính quyền sở tại. Chi phí tour sẽ không hoàn lại và các chi phí phát sinh (nếu có) sẽ do khách tự thanh toán.</p>
+							<strong>Điều kiện hủy tour</strong>
+							<p>– Hủy tour trước 7 ngày: hoàn lại 70% tổng số tiền.</p>
+							<p>– Hủy tour trước 5 ngày: hoàn lại 50% tổng số tiền.</p>
+							<p>– Hủy tour trước 3 ngày: hoàn lại 30% tổng số tiền.</p>
+							<p>– Hủy tour trước 1 ngày: đền bù bằng tổng giá trị tour.</p>
+							<strong><i class="glyphicon glyphicon-play"></i> Thanh toán</strong>
+							<p><strong>Trực tiếp bằng tiền mặt hoặc qua thẻ tại Văn phòng Thiên Nhân Travel</strong></p>
+							<p>– 42 Quang Trung, Phường 9, Tp.Đà Lạt, T.Lâm Đồng</p>
+							<p>– Điện thoại: (06) 3356 2222</p>
+							<p><strong>Chuyển khoản</strong></p>
+							<p>– Chủ tài khoản: Công Ty TNHH TM VÀ DV Tổng Hợp Thiên Nhân </p>
+							<p>– Số tài khoản VND: 540 620 100 3004</p>
+							<p>– Ngân hàng: Agribank Tp.Đà Lạt Lâm Đồng</p>
+							<p>– Tên tài khoản: Trần Duy Thắng </p>
+							<p>– Số tài khoản VND: 007 100 081 9840</p>
+							<p>– Ngân hàng: Vietcombank Tp. Hồ Chí Minh</p>
+							<p><strong>Điều kiện thanh toán</strong></p>
+							<p>– Khi đăng ký đặt cọc 50% số tền tour.</p>
+							<p>– Số tiền còn lại thanh toán trước ngày khởi hành 5 ngày.</p>
+							<strong><i class="glyphicon glyphicon-play"></i> Liên hệ hỗ trợ</strong>
+							<p><strong>Công ty TNHH TMDV Tổng Hợp Thiên Nhân văn phòng TP.Đà Lạt: </strong></p>
+							<p>Địa chỉ: 42 Quang Trung, Phường 9, TP. Đà Lạt</p>
+							<p>Điện thoại: (06) 3356 2222</p>
+							<p>Email: info@thiennhantravel.com</p>
+							<p><strong>Công ty TNHH TMDV Tổng Hợp Thiên Nhân văn phòng TP Hồ Chí Minh </strong></p>
+							<p>Địa chỉ: 6 Mạc Đĩnh Chi, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</p>
+							<p>Điện thoại: (09) 1560 6124</p>
+							<p>Email: info@thiennhantravel.com</p>
+						</div>
+						<div class="row norow luuyctr scr" id="luuy">
+							<h3><i class="glyphicon glyphicon-play-circle"></i> LƯU Ý</h3>
+							<p>- Quý khách vui lòng tự chịu trách nhiệm nếu bị từ chối nhập cảnh tại nước sở tại vì lý do nhân thân (mất 100% tiền Tour).</p>
+							<p>- Do tour khách lẻ ghép đoàn, nếu Quý khách tự ý tách đoàn, không tham gia chương trình cùng đoàn Quý khách sẽ đóng phụ thu 2.000.000 VNĐ/ khách</p>
+							<p>- Công ty được quyền thay đổi lịch trình chuyến đi, sử dụng các hãng hàng không thay thế nhưng vẫn đảm bảo tham quan đầy đủ các tuyến điểm theo chương trình.</p>
+							<p>- Thuế & phụ thu phí xăng dầu có thể thay đổi tuỳ vào thời điểm xuất vé của hãng hàng không.</p>
+							<p>- Quý khách vui lòng cung cấp đầy đủ thông tin về việc xuất hóa đơn trước khi Tour khởi hành 03 ngày. Sau thời gian này mọi khiếu nại về hóa đơn sẽ không được giải quyết.</p>
+						</div>
+					</div>
+				</div>
+			</div></div>
+			<div class="col-xs-4 sidebar-detail">
+				<div class="excerpt-tour">
+					<div class="price-tour">
+						<h2>1,500,000<span> VND</span></h2>
+						<div class="row norow form-group">
+							<label class="col-xs-3 nopadding">Ngày nhận:</label>
+							<div class="col-xs-9 nopadright"><input type="text" class="form-control arrival" id="arrival" placeholder="Ngày khởi hành" name="arrival" /><i class="glyphicon glyphicon-calendar"></i></div>
+						</div>
+						<div class="row norow form-group">
+							<label class="col-xs-3 nopadding">Số khách:</label>
+							<div class="col-xs-9 nopadright"><input type="text" class="form-control no-customer" id="no-customer" placeholder="Số lượng người" name="no-customer" /><i class="glyphicon glyphicon-user"></i></div>
+						</div>
+						<a class="dattour" id="dattour">ĐẶT TOUR</a>
+					</div>
+					<div class="quick-view">
+						<li id="lichtrinhctr">Lịch trình tour</li>
+						<li id="dvdikemctr">Dịch vụ đi kèm</li>
+						<li id="dieukhoanctr">Điều khoản</li>
+						<li id="chinhsachctr">Chính sách đổi/hủy tour</li>
+						<li id="luuyctr">Lưu ý</li>
+					</div>
+				</div>
+			</div>
         </div>
         <div class="clear col-xs-12"><div class="row norow ref-tour">
             <h3 class="row norow ref-title nomartop">Tours du lịch tương tự</h3>
