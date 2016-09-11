@@ -1,0 +1,230 @@
+.searchbox {
+    position: absolute;
+    top: -60px;
+    left: 0;
+
+    .searchbox-wrap {
+	    position: relative;
+	    display: block;
+	    padding: 16px 8px;
+		background: #ebebeb;
+	    -webkit-box-shadow: 0 1px 20px rgba(0,0,0,0.35);
+	    -moz-box-shadow:    0 1px 20px rgba(0,0,0,0.35);
+	    box-shadow:         0 1px 20px rgba(0,0,0,0.35);
+
+	    .icn-plane {
+		    position: absolute;
+		    top: -26px;
+		    right: 16px;
+		}
+
+		> form > div {
+		    padding: 0 6px;
+		}
+
+		input, select {
+		    border: 1px solid #DDDDDD;
+		    border-radius: 4px;
+		    font-size: 14px;
+		    padding: 8px;
+		    width: 100%;
+		}
+
+		input:focus, select:focus {
+		    border: 1px solid #888888;
+		}
+
+		select {
+		    padding: 9px 8px;
+		}
+
+		.date-home-checkin, .date-home-checkout,
+		.date-menu-checkin, .date-menu-checkout,
+		.date-detail-checkin, .date-detail-checkout,
+		.date-search-checkin, .date-search-checkout {
+		    position: relative;
+
+		    i {
+			    position: absolute;
+			    cursor: pointer;
+			    top: 10px;
+			    right: 6px;
+			}
+		}
+
+		.search-suggest {
+		    background-color: #FFFFFF;
+		    border: 1px solid #2574A9;
+		    position: absolute;
+		    padding: 12px 0;
+		    display: none;
+		    z-index: 168;
+		    top: 70px;
+		    left: 0;
+
+		    h4 {
+				font-weight: bold;
+			}
+
+			div {
+				padding-bottom: 6px;
+			}
+		}
+
+		.search-autocomplete {
+			position: absolute;
+			padding: 0 6px;
+			display: none;
+			/* display: block; */
+			z-index: 168;
+			width: 100%;
+			top: 54px;
+			left: 0;
+
+			.autocomplete-wrap {
+				background-color: #FFFFFF;
+				border: 1px solid #DDDDDD;
+				display: block;
+				font-size: 14px;
+				max-height: 320px;
+				padding-bottom:4px;
+
+				div.item {
+					padding: 4px 8px;
+
+					a {
+						display: block;
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+				}
+
+				div.item-place {
+					position: relative;
+					padding: 8px;
+
+					a {
+						font-weight: bold;
+						display: block;
+					}
+
+					img {
+						width: 48px;
+						height:48px;
+					}
+
+					span {
+						position: absolute;
+						display: inline-block;
+						font-size: 12px;
+						color: #003c71;
+						right: 10px;
+						top: 8px;
+
+						b {
+							font-size: 16px;
+							font-weight: bold;
+						}
+
+						b:after {
+							content: " ";
+						}
+					}
+				}
+
+				div.item:hover,
+				div.item-place:hover {
+					background-color: #d9f6f9;
+					color: #00c0d9;
+				}
+
+				div.title {
+					font-size: 14px;
+					font-weight: bold;
+					padding: 4px 8px;
+					background-color: #DDDDDD;
+				}
+
+				.mCSB_scrollTools {
+					right: -4px;
+
+					.mCSB_draggerContainer {
+						.mCSB_dragger {
+							.mCSB_dragger_bar {
+								background-color: #236baa;
+							}
+						}
+
+						.mCSB_draggerRail {
+							background-color: #DDDDDD;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.btn-orange {
+		line-height: 20px;
+	}
+
+	.bootstrap-datetimepicker-widget .table-condensed {
+		thead {
+
+			tr th {
+				color: #003E6C;
+			}
+
+			tr:first-child {
+
+				th:hover {
+					background-color: #003E6C;
+					color: #FFFFFF;
+				}
+			}
+		}
+
+	} 
+}
+
+.top-search {
+	position: absolute;
+	top: 72px !important;
+	padding: 0;
+	z-index: 1020;
+
+	.searchbox-wrap {
+		background: #003E6C;
+		border-radius: 0 0 6px 6px;
+	    -webkit-box-shadow: none;
+	    -moz-box-shadow:    none;
+	    box-shadow:         none;
+
+		ul {
+			li.lbl-search {
+				color: #FFFFFF;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.searchbox {
+		margin: 32px 0 8px;
+		position: inherit;
+		left: 0;
+		top: 0;
+	}
+
+	.top-search {
+		top: 0 !important;
+		margin: 0;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1085px) {
+	.top-search {
+		top: 115px !important;
+	}
+}

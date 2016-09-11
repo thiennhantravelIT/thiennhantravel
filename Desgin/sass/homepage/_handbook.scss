@@ -1,0 +1,92 @@
+.home-handbook {
+	padding: 8px 0 16px;
+
+	.owl-handbook {
+		position: relative;
+	
+		.item {
+			background-color: #003E6C;
+			font-weight: bold;
+			margin:0 auto;
+			width: 215px;
+			min-height: 210px;
+
+			.handbook-img {
+				img {
+					width: 215px;
+					height:121px;
+				}
+			}
+
+			.handbook-txt {
+				display: inline-block;
+				padding: 8px 6px 16px;
+				color: #FFFFFF;
+			}
+		}
+
+		.item:hover {
+			opacity: .8;
+		}
+
+		.owl-controls {
+			position: absolute;
+			display: block;
+			width: 100%;
+			top: 20px;
+			left: 0;
+
+			.owl-buttons {
+				position: relative;
+				display: none;
+			}
+
+			.owl-prev, .owl-next {
+				background-color: #f2f2f2;
+				display: inline-block;
+				text-align: center;
+				border-radius: 50%;
+				color: #004e80;
+				padding: 10px;
+				height: 44px;
+
+				i {
+					font-size: 36px;
+					font-weight: bold;
+					display: inline-block;
+					height: 18px;
+					width: 24px;
+					padding: 3px 0 0;
+				}
+			}
+
+			.owl-prev {
+				position: absolute;
+				top: 40px;
+				left: -16px;
+			}
+
+			.owl-next {
+				position: absolute;
+				top: 40px;
+				right: -16px;
+			}
+
+			.owl-prev:hover, .owl-next:hover {
+				opacity: .8;
+			}
+		}
+
+		.owl-handbook:hover .owl-controls .owl-buttons {
+			display: block;
+		}
+	}
+
+	.owl-handbook:hover {
+		.owl-controls {
+			.owl-buttons {
+				display: block;
+			}
+		}
+	}
+}

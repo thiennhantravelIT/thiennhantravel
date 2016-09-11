@@ -1,0 +1,340 @@
+.content-tour
+{
+	.content {
+	    min-height: 250px;
+	    padding: 15px;
+	    margin-right: auto;
+	    margin-left: auto;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	}
+	.localHeadLine.hasLine {
+	    margin-bottom: 30px;
+	    margin-top: 30px;
+	    border-bottom: 2px solid #003c71;
+	    color: #003c71;
+	    font-weight: normal;
+	    padding: 8px 0;
+	    font-size: 32px;
+	}
+	.localHeadLine a {
+    	color: #003c71;
+	}
+	.localHeadLine .readMoreTours {
+	    font-size: 12px;
+	    float: right;
+	    position: relative;
+	    top: 17px;
+	}
+	.cardItem .cardItemContainer {
+	    margin: 0;
+	    padding: 0;
+	    font-size: 13px;
+	}
+	.cardItem .cardItemContainer .cardItemContent {
+	    -webkit-transition: all .3s linear;
+	    -moz-transition: all .3s linear;
+	    transition: all .3s linear;
+	    color: #4e4e4e;
+	    padding: 10px 0;
+	    background-color: #fff;
+	    border: 1px solid #e4e4e6;
+	}
+	.ribbonContainerOuter {
+	    position: absolute;
+	    top: 0;
+	    left: 1px;
+	    width: 100%;
+	}
+
+	.ribbonContainerOuter .ribbonContainerInner {
+	    padding: 5px 15px 3px 15px;
+	}
+	.v-ribbon h1, .v-ribbon span {
+	    z-index: 10;
+	    font-weight: bold;
+	    font-size: 14px;
+	    text-align: center;
+	    position: absolute;
+	    color: #fff;
+	    margin: 0 0 0 -26px;
+	    background-color: #e52822;
+	    top: 10px;
+	    box-shadow: 0 1px 2px rgba(0,0,0,.12),0 0 2px rgba(0,0,0,.24);
+	}
+	.v-margin-bottom-10 {
+    	margin-bottom: 10px;
+	}
+	.cardItem .cardItemContainer .cardItemContent .cardItemTourNameDiv .cardItemTourName {
+	    color: #003c71;
+	    font-size: 16px;
+	    font-weight: bold;
+	}
+	.cardItem .cardItemContainer .cardItemContent .cardItemDepartDiv {
+    	min-height: 35px;
+	}
+	.cardItem .cardItemContainer .cardItemImage figure {
+	    display: block;
+	    position: relative;
+	    overflow: hidden;
+	}
+	.cardItem .cardItemContainer:hover .cardItemContent {
+	    background-color: rgba(64,166,242,.1);
+	    border: 1px solid rgba(64,166,242,.2);
+	}
+	.cardItem .cardItemContainer .cardItemContent {
+	    -webkit-transition: all .3s linear;
+	    -moz-transition: all .3s linear;
+	    transition: all .3s linear;
+	    color: #4e4e4e;
+	    padding: 10px 0;
+	    background-color: #fff;
+	    border: 1px solid #e4e4e6;
+	}
+	.cardItem .cardItemContainer .cardItemContent .cardItemPrice .price {
+	    font-size: 22px;
+	    font-weight: bold;
+	}
+	.vcolor-info {
+    	color: #00c1de;
+	}
+	
+	.v-ribbon h1:before, .v-ribbon h1:after, .v-ribbon span:before, .v-ribbon span:after {
+	    content: '';
+	    position: absolute;
+	    border-style: solid;
+	    border-color: transparent;
+	    bottom: -10px;
+	}
+	.v-ribbon h1:before, .v-ribbon span:before {
+	    border-width: 0 10px 10px 0;
+	    border-right-color: #9c0000;
+	    left: 0;
+	}
+	.transportDiv i.fa {
+    	margin: 5px;
+	}
+	
+}
+.popularTourDiv2
+{
+	background-color: #ecf0f5;
+	
+	padding-bottom: 15px;
+	.localHeadLine.hasLine {
+	    margin-bottom: 30px;
+	    margin-top: 30px;
+	    border-bottom: 2px solid #003c71;
+	}
+	.localHeadLine .readMoreTours {
+	    font-size: 12px;
+	    float: right;
+	    position: relative;
+	    top: 17px;
+	}
+	.localHeadLine {
+	    font-weight: normal;
+	    padding: 8px 0;
+	    margin-bottom: 15px;
+	    border-bottom: 1px solid #ddd;
+	    font-size: 32px;
+	}
+}
+@media only screen and (min-width: 320px)
+{
+	.localHeadLine {
+	    padding-left: 15px;
+	    padding-right: 15px;
+	}
+	.tourHomeContainer .row .cardItem {
+    	display: block;
+    }
+	.cardItem {
+	    padding: 0 0 30px 0;
+	}
+	.tourHomeContainer .row .cardItem a {
+    	display: block;
+	}
+	.tourHomeContainer .row .cardItem .cardItemContainer {
+    	display: block;
+	}
+	.tourHomeContainer .row .cardItem .cardItemContainer .cardItemContent {
+    	display: block;
+	}
+	.v-ribbon h1, .v-ribbon span {
+    	padding: 5px 10px 5px 20px;
+	}
+	.tourHomeContainer .row .cardItem .cardItemContainer .cardItemContent>div .cardItemTourNameDiv {
+    	display: block;
+	}
+	.tourHomeContainer .row>div {
+	    display: block;
+	    justify-content: space-between;
+	}
+	.tourHomeContainer .row .cardItem .cardItemContainer .cardItemContent>div .transportDiv {
+   		display: block;
+	}
+	.cardItem .cardItemContainer .cardItemImage figure img {
+    	width: 100%;
+	}
+	.popularTourDiv2 {
+	    margin-left: -15px;
+	    margin-right: -15px;
+	}
+	.popularTourDiv2 .container .popularTourContainer {
+	    border: none;
+	    background: none;
+	}
+	section.content {
+	    margin-left: -15px;
+	    margin-right: -15px;
+	}
+}
+
+@media only screen and (min-width: 480px)
+{
+	.localHeadLine {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	.tourHomeContainer .row {
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    flex: 1;
+	}
+	.popularTourDiv2 .tourHomeContainer .row {
+    	display: block;
+	}
+	.tourHomeContainer .row .cardItem {
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    flex: 1;
+	}
+	.cardItem {
+	    padding: 0 0 30px 0;
+	}
+	.tourHomeContainer .row .cardItem a {
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    flex: 1;
+	}
+	.tourHomeContainer .row .cardItem .cardItemContainer {
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    flex: 1;
+	    flex-direction: column;
+	    justify-content: flex-end;
+	}
+	.tourHomeContainer .row .cardItem .cardItemContainer .cardItemContent {
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    flex: 1;
+	    justify-content: flex-start;
+	}
+	.v-ribbon h1, .v-ribbon span {
+    	padding: 5px 10px 5px 10px;
+	}
+	.v-ribbon h1, .v-ribbon span {
+    	padding: 5px 10px 5px 10px;
+	}
+	.tourHomeContainer .row .cardItem .cardItemContainer .cardItemContent>div .cardItemTourNameDiv {
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    flex: 1;
+	}
+	.tourHomeContainer .row .cardItem .cardItemContainer .cardItemContent>div .transportDiv {
+    	display: block;
+	}
+	.tourHomeContainer .row>div {
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+	}
+	.cardItem .cardItemContainer .cardItemImage figure img {
+    	object-fit: cover;
+	    max-width: 100%;
+	    -moz-transition: .5s ease-in-out;
+	    -webkit-transition: .5s ease-in-out;
+	    transition: .5s ease-in-out;
+	}
+	.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	    display: block;
+	    max-width: 100%;
+	    height: auto;
+	}
+	.cardItem .cardItemContainer .cardItemPriceDivOuter {
+	    -webkit-transition: all .7s linear;
+	    -moz-transition: all .7s linear;
+	    transition: all .7s linear;
+	    text-rendering: geometricPrecision;
+	    text-rendering: optimizeLegibility;
+	    font-smooth: always;
+	    font-smoothing: antialiased;
+	    -moz-font-smoothing: antialiased;
+	    -webkit-font-smoothing: subpixel-antialiased;
+	    -webkit-font-smoothing: antialiased;
+	    background: rgba(0,70,126,.8);
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	}
+	.cardItem .cardItemContainer .cardItemPriceDivOuter .cardItemPriceDivInner {
+	    padding: 5px 15px 3px 15px;
+	    font-size: 14px;
+	    color: #4e4e4e;
+	    -webkit-text-shadow: 0 0 1px rgba(0,0,0,.6);
+	    -moz-text-shadow: 0 0 1px rgba(0,0,0,.6);
+	    text-shadow: 0 0 1px rgba(0,0,0,.6);
+	}
+	.cardItem .cardItemContainer .cardItemPriceDivOuter .cardItemPriceDivInner .cardItemPriceAfterDiscount {
+	    color: #fff;
+	    font-size: 14px;
+	    font-weight: bold;
+	}
+	.cardItem .cardItemContainer .cardItemPriceDivOuter .cardItemPriceDivInner .cardItemPriceAfterDiscount {
+	    color: #fff;
+	    font-size: 14px;
+	    font-weight: bold;
+	}
+	.popularTourDiv2 {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+	.popularTourDiv2 .container .popularTourContainer {
+	    border: none;
+	    background: none;
+	}
+	section.content {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+}
+

@@ -1,0 +1,10 @@
+.date-modal-checkin, .date-modal-checkout {
+    position: relative;
+
+    i {
+	    position: absolute;
+	    cursor: pointer;
+	    top: 8px;
+	    right: 6px;
+	}
+}

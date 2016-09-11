@@ -1,0 +1,145 @@
+.recentSearch
+{
+	visibility: visible;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    background-color: rgba(0,60,113,.05);
+    .itemList {
+	    display: -webkit-flex;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    flex: 1;
+	}
+	.localHeadLine {
+	    margin-bottom: 0;
+	    border-bottom: none;
+	    color: #003c71;
+		font-weight: normal;
+	    padding: 8px 0;
+	    font-size: 32px;
+
+	}
+	.recentSearchWrapper {
+	    display: flex;
+	    flex-flow: column;
+	    align-content: flex-start;
+	}
+	.itemList .flex-row {
+	    -webkit-transition: all .3s linear;
+	    -moz-transition: all .3s linear;
+	    transition: all .3s linear;
+	}
+	.recentSearchWrapper .recent-row, .recentSearch .recentSearchWrapper .recent-col {
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+	.itemList .row>div, .recentSearch .itemList .flex-row>div {
+	    -webkit-transition: all .3s linear;
+	    -moz-transition: all .3s linear;
+	    transition: all .3s linear;
+	}
+	.recentSearchWrapper .recent-row, .recentSearch .recentSearchWrapper .recent-col {
+	    display: flex;
+	    flex-wrap: wrap;
+	}
+
+	.recentSearchWrapper a {
+	    display: flex;
+	    width: 100%;
+	}
+
+	.recentSearchWrapper a .card {
+	    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	    -webkit-transition: all .3s linear;
+	    -moz-transition: all .3s linear;
+	    transition: all .3s linear;
+	    background-color: #fff;
+	    margin: 10px 0;
+	    flex: 1 0 0;
+	}
+
+	.recentSearchWrapper a .card .card-item {
+	    display: flex;
+	    -webkit-transition: all .3s linear;
+	    -moz-transition: all .3s linear;
+	    transition: all .3s linear;
+	    -webkit-tap-highlight-color: rgba(0,135,245,0);
+	}
+
+	.recentSearchWrapper a .card .card-item img {
+	    width: 120px;
+	    height: 120px;
+	}
+
+	 .recentSearchWrapper a .card .card-item .card-content {
+	    padding: 10px 0 5px 10px;
+	    display: flex;
+	    flex-direction: column;
+	    flex-wrap: wrap;
+	    flex: 1;
+	}
+
+	.recentSearchWrapper a .card .card-item .card-content .card-name {
+	    display: flex;
+	    flex-direction: column;
+	    flex-wrap: wrap;
+	    flex: 1;
+	    color: #003c71;
+	}
+
+	.recentSearchWrapper a .card .card-item .card-content .card-price {
+	    text-align: right;
+	    font-size: 16px;
+	    color: #00c1de;
+	}
+	.recentSearchWrapper a .card .card-item .card-content p {
+	    font-weight: bold;
+	    line-height: 1.4;
+	    margin: 0;
+	}
+	.recentSearchWrapper a .card .card-item .card-content p {
+	    font-weight: bold;
+	    line-height: 1.4;
+	    margin: 0;
+	}
+	.btn-box-tool {
+	    padding: 5px;
+	    font-size: 12px;
+	    background: 0 0;
+	    color: #97a0b3;
+	}
+	.recent-col a:hover
+	{
+		text-decoration: none;
+	}
+
+}
+
+
+@media only screen and (min-width: 320px)
+{
+	.recentSearch {
+    	display: none;
+	}
+	.localHeadLine {
+	    padding-left: 15px;
+	    padding-right: 15px;
+	}
+
+}
+@media only screen and (min-width: 480px)
+{
+	.recentSearch {
+    	display: block;
+	}
+}
+
+@media (min-width: 1200px)
+{
+	.col-lg-12 {
+    	width: 100%;
+	}
+}

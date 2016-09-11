@@ -1,0 +1,20 @@
+.home-place {
+	padding: 8px 0 16px;
+
+	.place-item {
+		padding: 2px;
+
+		a {
+			display: inline-block;
+			width: 100%;
+			max-height: 281px;
+
+			img {
+				background: #D4D4D4;
+				width: 100%;
+				height: auto;
+				max-height: 281px;
+			}
+		}
+	}
+}
