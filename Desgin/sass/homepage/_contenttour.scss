@@ -10,15 +10,15 @@
 	}
 	.localHeadLine.hasLine {
 	    margin-bottom: 30px;
-	    margin-top: 30px;
-	    border-bottom: 2px solid #003c71;
-	    color: #003c71;
+	    margin-top: 12px;
+	    border-bottom: 2px solid #940408;
+	    color: #940408;
 	    font-weight: normal;
 	    padding: 8px 0;
-	    font-size: 32px;
+	    font-size: 24px;
 	}
 	.localHeadLine a {
-    	color: #003c71;
+    	color: #940408;
 	}
 	.localHeadLine .readMoreTours {
 	    font-size: 12px;
@@ -66,7 +66,7 @@
     	margin-bottom: 10px;
 	}
 	.cardItem .cardItemContainer .cardItemContent .cardItemTourNameDiv .cardItemTourName {
-	    color: #003c71;
+	    color: #940408;
 	    font-size: 16px;
 	    font-weight: bold;
 	}
@@ -91,12 +91,41 @@
 	    background-color: #fff;
 	    border: 1px solid #e4e4e6;
 	}
+	.cardItem .cardItemContainer .cardItemPriceDivOuter {
+	    -webkit-transition: all .7s linear;
+	    -moz-transition: all .7s linear;
+	    transition: all .7s linear;
+	    text-rendering: geometricPrecision;
+	    text-rendering: optimizeLegibility;
+	    font-smooth: always;
+	    font-smoothing: antialiased;
+	    -moz-font-smoothing: antialiased;
+	    -webkit-font-smoothing: subpixel-antialiased;
+	    -webkit-font-smoothing: antialiased;
+	    background: rgba(0,70,126,.8);
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	}
+	.cardItem .cardItemContainer .cardItemPriceDivOuter .cardItemPriceDivInner {
+	    padding: 5px 15px 3px 15px;
+	    font-size: 14px;
+	    color: #4e4e4e;
+	    -webkit-text-shadow: 0 0 1px rgba(0,0,0,.6);
+	    -moz-text-shadow: 0 0 1px rgba(0,0,0,.6);
+	    text-shadow: 0 0 1px rgba(0,0,0,.6);
+	}
+	.cardItem .cardItemContainer .cardItemPriceDivOuter .cardItemPriceDivInner .cardItemPriceAfterDiscount {
+	    color: #fff;
+	    font-size: 14px;
+	    font-weight: bold;
+	}
 	.cardItem .cardItemContainer .cardItemContent .cardItemPrice .price {
 	    font-size: 22px;
 	    font-weight: bold;
 	}
 	.vcolor-info {
-    	color: #00c1de;
+    	color: #ffbd00;
 	}
 	
 	.v-ribbon h1:before, .v-ribbon h1:after, .v-ribbon span:before, .v-ribbon span:after {
@@ -115,6 +144,7 @@
     	margin: 5px;
 	}
 	
+	
 }
 .popularTourDiv2
 {
@@ -123,8 +153,8 @@
 	padding-bottom: 15px;
 	.localHeadLine.hasLine {
 	    margin-bottom: 30px;
-	    margin-top: 30px;
-	    border-bottom: 2px solid #003c71;
+	    margin-top: 12px;
+	    border-bottom: 2px solid #940408;
 	}
 	.localHeadLine .readMoreTours {
 	    font-size: 12px;
@@ -137,7 +167,42 @@
 	    padding: 8px 0;
 	    margin-bottom: 15px;
 	    border-bottom: 1px solid #ddd;
-	    font-size: 32px;
+	    font-size: 24px;
+	    span{
+	    	color:#940408;
+	    }
+	}
+	.container .popularTourContainer .cardItem .cardItemContainer .cardItemImage .cardItemPriceDivOuter {
+   		 width: 100%;
+	}
+	.cardItemPriceDivOuter {
+	    -webkit-transition: all .7s linear;
+	    -moz-transition: all .7s linear;
+	    transition: all .7s linear;
+	    text-rendering: geometricPrecision;
+	    text-rendering: optimizeLegibility;
+	    font-smooth: always;
+	    font-smoothing: antialiased;
+	    -moz-font-smoothing: antialiased;
+	    -webkit-font-smoothing: subpixel-antialiased;
+	    -webkit-font-smoothing: antialiased;
+	    background: rgba(0,70,126,.8);
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	}
+	.cardItemPriceDivOuter .cardItemPriceDivInner .cardItemPriceAfterDiscount {
+	    color: #fff;
+	    font-size: 14px;
+	    font-weight: bold;
+	}
+	.cardItemPriceDivOuter .cardItemPriceDivInner {
+	    padding: 5px 15px 3px 15px;
+	    font-size: 14px;
+	    color: #4e4e4e;
+	    -webkit-text-shadow: 0 0 1px rgba(0,0,0,.6);
+	    -moz-text-shadow: 0 0 1px rgba(0,0,0,.6);
+	    text-shadow: 0 0 1px rgba(0,0,0,.6);
 	}
 }
 @media only screen and (min-width: 320px)
@@ -324,6 +389,7 @@
 	    font-size: 14px;
 	    font-weight: bold;
 	}
+
 	.popularTourDiv2 {
 	    margin-left: 0;
 	    margin-right: 0;

@@ -25,10 +25,138 @@
     <link href="css/TN.resp.css" rel=stylesheet />
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/datepicker.css" rel="stylesheet" />
+<<<<<<< HEAD
 	<script src="js/tours/tours.js"></script>
+=======
+    <script type="text/javascript">
+    
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.7&appId=520198991502631";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk')); 
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+            var nowTemp = new Date();
+            var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+            var checkin = $('#arrival').datepicker({
+                format:'dd/mm/yyyy',
+                onRender: function(date) {
+                    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+                }
+            }).on('changeDate',function(ev){
+                $('.datepicker').hide();
+            });
+            ////==========//////
+            $('.quick-view li').click(function(){
+                 $('.quick-view li').removeClass('active');
+                var scr = $(this).attr('id');
+                $('html,body').animate({ scrollTop: $('.'+scr).offset().top },'500');
+                $(this).addClass('active');
+            });
+			//===========//
+			wd = $(window).width();
+			if(wd<800){
+				$('.sidebar-detail').insertAfter('.single-tour-info');
+			}
+            //=============//
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 200 && wd >800 ){
+                    $('.excerpt-tour').addClass('fixp');
+                    var h = $('.single-tour').height();
+                    if($(this).scrollTop() > h-420){
+                        $('.excerpt-tour').removeClass('fixp');
+                    }
+                }
+                if($(this).scrollTop() < 200 ){
+                    $('.excerpt-tour').removeClass('fixp');
+                }
+                //---//
+                $('.single-tour-content div.scr').each(function(){
+                    var id = $(this).attr('id'), t = $('#'+id).offset().top, h = $('#'+id).outerHeight(), wh = $(window).height(), ws = $(window).scrollTop();
+                    if(ws > (t+h-wh)){
+                        $('.quick-view li').removeClass('active');
+                        $('#'+id+'ctr').addClass('active');
+                    }
+                });
+
+            });
+			//==============//
+			$('.dktab li').click(function(){
+				$('.dktab li').removeClass('dkactive');
+				$(this).addClass('dkactive');
+				id = $(this).attr('data-id');
+				$('#baogom, #khongbaogom, #phuthu').css({'display':'none'});
+				$('#'+id).stop().fadeIn(500);
+			});
+        });
+    </script>
+>>>>>>> d293284e609f6fb780fbf782cd401f9ee0d5c571
 </head>
-<body data-page="homepage" class="homePage">
+<body data-page="tour-details" class="tour-details">
+ <div id="fb-root"></div>
 	<header>
+		 <div class="container">
+                <a class="site-logo" href="index.html" title="">
+                    <i class="icons icons-logo"></i>
+                </a>
+                <a href="javascript:;" class="mobi-toggler menu-toggle hover-opacity-8">
+                    <i class="sprites icn-menu-list"></i>
+                </a>
+                <!-- BEGIN HOTLINE -->
+                <ul class="hotline pull-right">
+                    <li><a class="hotline" href="tel:0973 506 977">0973 506 977</a></li>
+                    <li>từ 7h30-21h hàng ngày</li>
+                    <li class="menu-search hover-opacity-8" data-toggle="tooltip" data-placement="left" title="Tìm kiếm tour">
+                        <a href="javascript:;">
+                            <i class="sprites icn-menu-search"></i>
+                        </a>
+                    </li>
+                    <li class="menu-phone sprites icn-menu-phone"></li>
+                    <li class="menu-arrow sprites icn-menu-arrow"></li>
+                </ul>
+                <!-- END HOTLINE -->
+                <!-- BEGIN NAVIGATION -->
+                <div class="header-navigation pull-left font-transform-inherit">
+                    <ul>
+                        <li class="active">
+                            <a href="#" class="">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="">
+                                Tour
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="">
+                                Khách sạn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="">
+                                Cẩm nang du lịch
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle menu-more" data-toggle="dropdown" href="javascript:;">
+                                <i class="sprites icn-menu-threedots"></i>
+                            </a>
+                            <ul class="dropdown-menu bullet">
+                                <li><a href="">Giới thiệu</a></li>
+                                <li><a href="">Hỏi đáp</a></li>
+                                <li><a href="">Hỗ trợ</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- END NAVIGATION -->
+                
+            </div>
 	</header>
 	<div class="main-content">
         <h1 class="row norow nomartop single-title">Tour du lịch tại công ty Thiên Nhân Travel</h1>
@@ -208,6 +336,56 @@
             </div>
         </div></div>
     </div>
-	<footer>
-	</footer>
+	   <!-- BEGIN FOOTER  -->
+        <footer class="homePageFooterDiv">
+            <div class="container">
+                <div class="foot-col-9 col-xs-12 col-sm-12 col-md-12 col-lg-6 h-padding-top-40">
+                   <div class="fb-page" data-href="https://www.facebook.com/Thi&#xea;n-Nh&#xe2;n-Travel-544195269032070/" data-width="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Thi&#xea;n-Nh&#xe2;n-Travel-544195269032070/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Thi&#xea;n-Nh&#xe2;n-Travel-544195269032070/">Thiên Nhân Travel</a></blockquote></div>
+                   
+                </div>
+                 <div class="foot-col-6 col-xs-12 col-sm-12 col-md-6 col-lg-4 h-margin-top-40">
+                    <ul>
+                        <li class="foot-call">Bạn cần trợ giúp? Hãy gọi ngay</li>
+                        <li class="foot-fone">CSKH:&nbsp;<a href="tel:0839308290">0973 506 977</a></li>
+                        <li class="foot-fone">Khác:&nbsp;&nbsp;<a href="tel:0839308291">0973 506 977</a></li>
+                        <li class="foot-time">từ 7h30 - 21h hằng ngày</li>
+                    </ul>
+                </div>
+                 <div class="foot-col-1 col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                    <ul>
+                        <li><h3>Thiennhantravle.com</h3></li>
+                        <li><a href="">Giới thiệu</a></li>
+                        <li><a href="">Truyền thông</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                        <li><a href="">Phản hồi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+               
+                <div class="foot-col-7 col-xs-12 col-sm-12 col-md-6 col-lg-12 address-footer">
+                    <ul>
+                       
+                        <li>
+                            <i class="glyphicon glyphicon-map-marker vcolor-gray fixGlyphicon"></i>
+                            <b>Trụ sở chính:</b> 14/D12 -Tổ 4 - Khu phố Lâm Viên - Phường 9 - TP Đà Lạt – Lâm Đồng (<a href="javascript:;" class=" font-size-14 call-modal-map" data-lat="10.77866733006275" data-lng="106.69041095396733">Xem bản đồ</a>)
+                        </li>
+                        <li>
+                             <i class="glyphicon glyphicon-map-marker vcolor-gray fixGlyphicon"></i>
+                            <b>Đà Lạt:</b> Số 42 - Quang Trung - Phường 9 – TP. Đà Lạt – Tỉnh Lâm Đồng (<a href="javascript:;" class=" font-size-14 call-modal-map" data-lat="21.0202535" data-lng="105.84974699999998">Xem bản đồ</a>)
+                        </li>
+                        <li>
+                             <i class="glyphicon glyphicon-map-marker vcolor-gray fixGlyphicon"></i>
+                            <b>HCM:</b>Số 6 – Mạc Đỉnh Chi – Phường Bến Nghé – Quận 1 – TP.Hồ Chí Minh (<a href="javascript:;" class=" font-size-14 call-modal-map" data-lat="21.0202535" data-lng="105.84974699999998">Xem bản đồ</a>)
+                        </li>
+                        <li>
+                             <i class="glyphicon glyphicon-map-marker vcolor-gray fixGlyphicon"></i>
+                              <b>Vinh:</b>Tầng 4, Tòa nhà Mai Linh – Đường Xô Viết Nghệ Tĩnh – Nghi Phú – TP Vinh – Nghệ An (<a href="javascript:;" class=" font-size-14 call-modal-map" data-lat="21.0202535" data-lng="105.84974699999998">Xem bản đồ</a>)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+	
 </body>
