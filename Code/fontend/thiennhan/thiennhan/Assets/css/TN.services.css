@@ -1,0 +1,155 @@
+/* line 1, ../sass/tour/_services.scss */
+body {
+  background: #F1F1F1 !important;
+}
+
+/* line 4, ../sass/tour/_services.scss */
+li {
+  list-style: none;
+}
+
+/* line 5, ../sass/tour/_services.scss */
+.clear {
+  clear: both;
+}
+
+/* line 6, ../sass/tour/_services.scss */
+.norow {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* line 7, ../sass/tour/_services.scss */
+.main-content {
+  width: 1200px;
+  margin: auto;
+}
+
+/* line 8, ../sass/tour/_services.scss */
+.nopadding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* line 9, ../sass/tour/_services.scss */
+.nopadleft {
+  padding-left: 0 !important;
+}
+
+/* line 10, ../sass/tour/_services.scss */
+.nopadright {
+  padding-right: 0 !important;
+}
+
+/* line 11, ../sass/tour/_services.scss */
+.thumb img {
+  max-width: 100%;
+}
+
+/* line 12, ../sass/tour/_services.scss */
+.nomartop {
+  margin-top: 0 !important;
+}
+
+/* line 13, ../sass/tour/_services.scss */
+.sepa {
+  height: 20px;
+  width: 100%;
+}
+
+/* line 14, ../sass/tour/_services.scss */
+.service-page {
+  margin-bottom: 15px;
+}
+
+/* line 15, ../sass/tour/_services.scss */
+.services {
+  background: #fff;
+  padding: 10px;
+}
+/* line 16, ../sass/tour/_services.scss */
+.services h1 {
+  font-size: 22px;
+  color: #940408;
+}
+/* line 17, ../sass/tour/_services.scss */
+.services .each-services {
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 15px;
+}
+/* line 18, ../sass/tour/_services.scss */
+.services .each-services h2 {
+  font-size: 20px;
+  color: #940408;
+}
+/* line 19, ../sass/tour/_services.scss */
+.services .each-services h4 {
+  font-size: 16px;
+}
+/* line 20, ../sass/tour/_services.scss */
+.services .each-services h3 {
+  color: #940408;
+  font-size: 20px;
+}
+
+/* line 23, ../sass/tour/_services.scss */
+.tours-list {
+  background: #fff;
+}
+/* line 25, ../sass/tour/_services.scss */
+.tours-list h3 {
+  color: #fff;
+  background: #940408;
+  padding: 8px 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* line 26, ../sass/tour/_services.scss */
+.tours-list .top-tours {
+  padding: 3px;
+}
+/* line 27, ../sass/tour/_services.scss */
+.tours-list .top-tours li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+/* line 28, ../sass/tour/_services.scss */
+.tours-list .top-tours li img {
+  padding: 0 3px;
+  margin-right: 3px;
+  width: 60px;
+  height: 50px;
+  float: left;
+}
+/* line 29, ../sass/tour/_services.scss */
+.tours-list .top-tours li h2 {
+  font-size: 14px;
+  line-height: 1.3em;
+}
+/* line 30, ../sass/tour/_services.scss */
+.tours-list .top-tours li h2 a {
+  color: #111;
+  display: block;
+}
+/* line 32, ../sass/tour/_services.scss */
+.tours-list .top-tours li h5 {
+  margin: 0;
+}
+/* line 33, ../sass/tour/_services.scss */
+.tours-list .top-tours li h5 strong {
+  color: #940408;
+}
+/* line 37, ../sass/tour/_services.scss */
+.tours-list .top-location li a {
+  display: block;
+  padding: 6px 5px;
+  color: #222;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+/* line 38, ../sass/tour/_services.scss */
+.tours-list .top-location li a:hover {
+  color: #940408;
+}

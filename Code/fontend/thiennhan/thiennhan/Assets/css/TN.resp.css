@@ -1,0 +1,105 @@
+/*Responsive*/
+/*----------*/
+@media screen and (max-width: 1300px) {
+  /* line 4, ../sass/tour/_resp.scss */
+  .main-content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1093px) {
+  /* line 8, ../sass/tour/_resp.scss */
+  .main-content {
+    width: 100%;
+  }
+}
+/*smaller then 1024*/
+@media screen and (max-width: 1024px) {
+  /* line 14, ../sass/tour/_resp.scss */
+  .main-content {
+    width: 100%;
+  }
+}
+/*May tinh bang chieu dung
+smaller than 770
+*************************************************************************************/
+@media screen and (max-width: 800px) {
+  /* line 21, ../sass/tour/_resp.scss */
+  .main-content, .tour-search, .tour-content, .single-content, .sidebar-detail, .service-page, .service-sidebar, .each-services .col-xs-3, .each-services .col-xs-9, .page-content, .page-sidebar {
+    width: 100% !important;
+  }
+
+  /* line 22, ../sass/tour/_resp.scss */
+  .tour-quick-locate {
+    display: none;
+  }
+
+  /* line 24, ../sass/tour/_resp.scss */
+  .each-tour .col-xs-3, .each-tour .col-xs-9 {
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+  /* line 25, ../sass/tour/_resp.scss */
+  .each-tour h3, .each-tour h2 {
+    padding-top: 10px;
+  }
+
+  /* line 28, ../sass/tour/_resp.scss */
+  .each-services .col-xs-9 {
+    padding-left: 0 !important;
+  }
+  /* line 29, ../sass/tour/_resp.scss */
+  .each-services h2 {
+    padding-top: 10px;
+  }
+
+  /* line 31, ../sass/tour/_resp.scss */
+  .quick-location ul li {
+    width: 50% !important;
+  }
+
+  /* line 32, ../sass/tour/_resp.scss */
+  .page-sidebar {
+    margin-top: 15px;
+  }
+}
+/************************************************************************************
+smaller than 580
+*************************************************************************************/
+@media screen and (max-width: 625px) {
+  /* line 38, ../sass/tour/_resp.scss */
+  .ref-tour .ref-tour-part, .dvdikemctr .col-xs-4 {
+    width: 100% !important;
+  }
+
+  /* line 39, ../sass/tour/_resp.scss */
+  .single-tour-info span {
+    display: block;
+  }
+
+  /* line 40, ../sass/tour/_resp.scss */
+  .ref-tour .ref-tour-part, .page-sidebar {
+    margin-top: 15px;
+  }
+}
+/************************************************************************************
+smaller than 490
+*************************************************************************************/
+@media screen and (max-width: 505px) {
+  /* line 47, ../sass/tour/_resp.scss */
+  .ref-tour .ref-tour-part, .dvdikemctr .col-xs-4 {
+    width: 100% !important;
+  }
+
+  /* line 48, ../sass/tour/_resp.scss */
+  .single-tour-info span {
+    display: block;
+  }
+
+  /* line 49, ../sass/tour/_resp.scss */
+  .ref-tour .ref-tour-part, .page-sidebar {
+    margin-top: 15px;
+  }
+}
+/************************************************************************************
+smaller than 360
+*************************************************************************************/
