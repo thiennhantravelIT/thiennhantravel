@@ -1,0 +1,213 @@
+/* line 1, ../sass/tour/_tour.scss */
+body {
+  background: #F1F1F1 !important;
+}
+
+/* line 4, ../sass/tour/_tour.scss */
+li {
+  list-style: none;
+}
+
+/* line 5, ../sass/tour/_tour.scss */
+.clear {
+  clear: both;
+}
+
+/* line 6, ../sass/tour/_tour.scss */
+.norow {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* line 7, ../sass/tour/_tour.scss */
+.main-content {
+  width: 1200px;
+  margin: auto;
+}
+
+/* line 8, ../sass/tour/_tour.scss */
+.nopadding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* line 9, ../sass/tour/_tour.scss */
+.nopadleft {
+  padding-left: 0 !important;
+}
+
+/* line 10, ../sass/tour/_tour.scss */
+.nopadright {
+  padding-right: 0 !important;
+}
+
+/* line 11, ../sass/tour/_tour.scss */
+.thumb img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+/* line 12, ../sass/tour/_tour.scss */
+.nomartop {
+  margin-top: 0 !important;
+}
+
+/* line 13, ../sass/tour/_tour.scss */
+.sepa {
+  height: 20px;
+  width: 100%;
+}
+
+/* line 14, ../sass/tour/_tour.scss */
+.each-tour {
+  padding: 15px;
+  background: #fff;
+  margin-bottom: 15px;
+}
+/* line 15, ../sass/tour/_tour.scss */
+.each-tour h3 a {
+  color: #222;
+}
+/* line 16, ../sass/tour/_tour.scss */
+.each-tour h3 a:hover {
+  color: #940408;
+  text-decoration: none;
+}
+/* line 18, ../sass/tour/_tour.scss */
+.each-tour .transport {
+  padding: 5px 0;
+}
+
+/* line 20, ../sass/tour/_tour.scss */
+.tour-search h3 {
+  padding: 10px;
+  background: #940408;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* line 21, ../sass/tour/_tour.scss */
+.tour-search-section {
+  background: #fff;
+}
+
+/* line 22, ../sass/tour/_tour.scss */
+.search-section {
+  padding: 10px 10px 20px 10px;
+}
+
+/* line 23, ../sass/tour/_tour.scss */
+.typesearch {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+/* line 24, ../sass/tour/_tour.scss */
+.search-form {
+  position: relative;
+}
+/* line 25, ../sass/tour/_tour.scss */
+.search-form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #940408;
+  color: #fff;
+}
+
+/* line 28, ../sass/tour/_tour.scss */
+.location-search li a {
+  display: block;
+  padding: 5px;
+  color: #222;
+  font-size: 16px;
+}
+/* line 29, ../sass/tour/_tour.scss */
+.location-search li a i {
+  padding-right: 5px;
+}
+/* line 31, ../sass/tour/_tour.scss */
+.location-search li a:hover {
+  color: #940408;
+}
+
+/* line 33, ../sass/tour/_tour.scss */
+.tour-info {
+  color: #999;
+}
+/* line 34, ../sass/tour/_tour.scss */
+.tour-info a {
+  float: right;
+  background: #940408;
+  color: #fff;
+  padding: 5px 10px;
+}
+/* line 35, ../sass/tour/_tour.scss */
+.tour-info a:hover {
+  color: #fff;
+}
+/* line 36, ../sass/tour/_tour.scss */
+.tour-info span {
+  color: #940408;
+}
+/* line 37, ../sass/tour/_tour.scss */
+.tour-info strong {
+  font-size: 24px;
+  color: #940408;
+}
+
+/* line 39, ../sass/tour/_tour.scss */
+.excerpt {
+  font-size: 16px;
+}
+
+/* line 40, ../sass/tour/_tour.scss */
+.tour-type {
+  padding-right: 20px;
+}
+
+/* line 41, ../sass/tour/_tour.scss */
+.quick-location {
+  background: #fff;
+  border: 1px solid #fbfbfb;
+  padding: 10px;
+}
+/* line 42, ../sass/tour/_tour.scss */
+.quick-location h3 {
+  color: #940408;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* line 43, ../sass/tour/_tour.scss */
+.quick-location ul li a {
+  display: block;
+  padding: 5px 0;
+  color: #888;
+  font-size: 14px;
+}
+/* line 44, ../sass/tour/_tour.scss */
+.quick-location ul li a:hover {
+  color: #940408;
+}
+
+/*========*/
+/* line 47, ../sass/tour/_tour.scss */
+.respdata {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border: #ddd 1px solid;
+  padding: 10px;
+  z-index: 1;
+}
+/* line 50, ../sass/tour/_tour.scss */
+.respdata li a {
+  display: block;
+  padding: 5px 0;
+  color: #111;
+}
+/* line 51, ../sass/tour/_tour.scss */
+.respdata li strong, .respdata li i {
+  color: #940408;
+}

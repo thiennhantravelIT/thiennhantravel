@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="70ca4bee15c742a88c2dad5f996a42fc" Name="Diagram1">
+        <EntityTypeShape EntityType="thiennhanModel.Attribute" Width="1.5" PointX="11.125" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.Book" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.BookingDetail" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.Category" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.Image" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.Page" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.Place" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.Tour" Width="1.5" PointX="6.875" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.TourAttribute" Width="1.5" PointX="9.125" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.TourTransport" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.Transport" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="thiennhanModel.sysdiagram" Width="1.5" PointX="5.375" PointY="9.75" />
+        <AssociationConnector Association="thiennhanModel.FK_TourAttribute_Attribute" />
+        <AssociationConnector Association="thiennhanModel.FK_BookingDetails_Book" />
+        <AssociationConnector Association="thiennhanModel.FK_BookingDetails_Tour" />
+        <AssociationConnector Association="thiennhanModel.FK_Tour_Category" />
+        <AssociationConnector Association="thiennhanModel.FK_Images_Tour" />
+        <AssociationConnector Association="thiennhanModel.FK_TourAttribute_Tour" />
+        <AssociationConnector Association="thiennhanModel.FK_TourTransport_Tour" />
+        <AssociationConnector Association="thiennhanModel.FK_TourTransport_Transport" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

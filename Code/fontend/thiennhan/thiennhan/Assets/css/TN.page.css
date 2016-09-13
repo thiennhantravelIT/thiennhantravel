@@ -1,0 +1,96 @@
+/* line 1, ../sass/tour/_page.scss */
+body {
+  background: #F1F1F1 !important;
+}
+
+/* line 4, ../sass/tour/_page.scss */
+li {
+  list-style: none;
+}
+
+/* line 5, ../sass/tour/_page.scss */
+.clear {
+  clear: both;
+}
+
+/* line 6, ../sass/tour/_page.scss */
+.norow {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* line 7, ../sass/tour/_page.scss */
+.main-content {
+  width: 1200px;
+  margin: auto;
+}
+
+/* line 8, ../sass/tour/_page.scss */
+.nopadding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* line 9, ../sass/tour/_page.scss */
+.nopadleft {
+  padding-left: 0 !important;
+}
+
+/* line 10, ../sass/tour/_page.scss */
+.nopadright {
+  padding-right: 0 !important;
+}
+
+/* line 11, ../sass/tour/_page.scss */
+.thumb img {
+  max-width: 100%;
+}
+
+/* line 12, ../sass/tour/_page.scss */
+.nomartop {
+  margin-top: 0 !important;
+}
+
+/* line 13, ../sass/tour/_page.scss */
+.sepa {
+  height: 20px;
+  width: 100%;
+}
+
+/* line 14, ../sass/tour/_page.scss */
+.about-us {
+  background: #fff;
+  padding: 10px;
+}
+/* line 15, ../sass/tour/_page.scss */
+.about-us h1 {
+  font-size: 22px;
+  color: #940408;
+}
+/* line 16, ../sass/tour/_page.scss */
+.about-us .about-us-content {
+  font-size: 16px;
+}
+
+/* line 18, ../sass/tour/_page.scss */
+.page-list {
+  background: #fff;
+}
+/* line 20, ../sass/tour/_page.scss */
+.page-list h3 {
+  color: #fff;
+  background: #940408;
+  padding: 10px;
+}
+/* line 21, ../sass/tour/_page.scss */
+.page-list ul li a {
+  display: block;
+  padding: 6px 5px;
+  color: #222;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+/* line 22, ../sass/tour/_page.scss */
+.page-list ul li a:hover {
+  color: #940408;
+}
