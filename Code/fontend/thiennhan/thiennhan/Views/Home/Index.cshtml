@@ -99,19 +99,18 @@
                         {
                             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
-                                    <a href="/du-lich/tour-thai-lan-5n4d-bangkok-pattaya-t9/458">
+                                    <a href="#">
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemContainer">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
                                                 <div class="ribbonContainerOuter">
                                                     <div class="ribbonContainerInner">
-                                                        @{
-                                                            var _a = item.Prices-(item.Prices * item.Percentpromotion) / 100;
-                                                        }
-                                                        <span class="v-ribbon"><h1>Khuyến mãi 20%</h1></span>
+                                                        <span class="v-ribbon"><h1>Khuyến mãi @item.Percentpromotion %</h1></span>
                                                     </div>
                                                 </div>
                                                 <figure>
                                                     <picture>
+                                                        @*<source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--500x313.jpg">
+                                                        <img class="img-responsive" src="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--360x225.jpg">*@
                                                         <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--500x313.jpg">
                                                         <img class="img-responsive" src="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--360x225.jpg">
                                                     </picture>
