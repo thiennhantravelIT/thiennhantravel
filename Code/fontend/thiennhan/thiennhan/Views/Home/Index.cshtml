@@ -1,5 +1,11 @@
-﻿@{
+﻿@using DAL.Models;
+@{
     ViewBag.Title = "Home Page";
+    List<Tour> _datatour = ViewBag.promotion as List<Tour>;
+    List<Tour> _datatourtypetrongnuoc = ViewBag.tourtypetrongnuoc as List<Tour>;
+    List<Tour> _datatourtypequocte = ViewBag.tourtypequocte as List<Tour>;
+    List<Tour> _datatourtypegiadinh = ViewBag.tourtypegiadinh as List<Tour>;
+   
 }
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 recentSearch">
     <div class="container">
@@ -89,6 +95,83 @@
                         </a>
                     </h3>
                     <div class="row">
+                        @foreach (var item in _datatour)
+                        {
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
+                                    <a href="/du-lich/tour-thai-lan-5n4d-bangkok-pattaya-t9/458">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemContainer">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
+                                                <div class="ribbonContainerOuter">
+                                                    <div class="ribbonContainerInner">
+                                                        @{
+                                                            var _a = item.Prices-(item.Prices * item.Percentpromotion) / 100;
+                                                        }
+                                                        <span class="v-ribbon"><h1>Khuyến mãi 20%</h1></span>
+                                                    </div>
+                                                </div>
+                                                <figure>
+                                                    <picture>
+                                                        <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--500x313.jpg">
+                                                        <img class="img-responsive" src="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--360x225.jpg">
+                                                    </picture>
+                                                </figure>
+                                                <div class="cardItemPriceDivOuter">
+                                                    <div class="cardItemPriceDivInner">
+                                                        <span class="cardItemPriceAfterDiscount"><i class="glyphicon glyphicon-map-marker"></i> 
+                                                        @{int i = 0;
+                                                          string at = string.Empty;
+                                                          }
+                                                        @foreach(var t in item.TourPlaces)
+                                                        {
+                                                            string _hsd = ",";
+                                                            
+                                                            if((i+1)==item.TourPlaces.Count)
+                                                            {
+                                                                at += t.Place.Name + _hsd;
+                                                            }
+                                                            i++;
+                                                        }
+                                                        @at
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemContent">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10 cardItemTourNameDiv">
+                                                        <span class="cardItemTourName">@item.Name</span>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemTourDetailDiv">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10">
+                                                            <div class="row">
+                                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                                    <span><i class="glyphicon glyphicon-time" data-toggle="tooltip" title="Thời lượng tour"></i> @item.Numberday </span>
+                                                                </div>
+                                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right transportDiv">
+                                                                    @foreach (var ab in item.TourTransports)
+                                                                    {
+                                                                        <i class="fa @ab.Transport.Icon" data-toggle="tooltip" title="@ab.Transport.Name"></i>
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-5 cardItemDepartDiv">
+                                                            <span>
+                                                                <i class="glyphicon glyphicon-calendar"></i> @item.Notes
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemPrice">
+                                                            <span class="price vcolor-info">@String.Format("{0:0,0}",item.Prices).Replace(",",".") VND</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        }
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
                                 <a href="/du-lich/tour-thai-lan-5n4d-bangkok-pattaya-t9/458">
@@ -422,59 +505,82 @@
                         </a>
                     </h3>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
-                                <a href="#">
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemContainer">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
-                                            <div class="ribbonContainerOuter">
-                                                <div class="ribbonContainerInner">
-                                                    <span class="v-ribbon"><h1></h1></span>
-                                                </div>
-                                            </div>
-                                            <figure>
-                                                <picture>
-                                                    <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/05/11/14/seoul-500x313.jpg">
-                                                    <img class="img-responsive" src="//cdn2.ivivu.com/2016/05/11/14/seoul-360x225.jpg">
-                                                </picture>
-                                            </figure>
-                                            <div class="cardItemPriceDivOuter">
-                                                <div class="cardItemPriceDivInner">
-                                                    <span class="cardItemPriceAfterDiscount"><i class="glyphicon glyphicon-map-marker"></i> Hàn Quốc</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemContent">
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
-                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10 cardItemTourNameDiv">
-                                                    <span class="cardItemTourName">Tour Hàn Quốc 4N4D: Mùa Thu Lá Đỏ</span>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemTourDetailDiv">
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10">
-                                                        <div class="row">
-                                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                                <span><i class="glyphicon glyphicon-time" data-toggle="tooltip" title="Thời lượng tour"></i> 4 Ngày 4 Đêm </span>
-                                                            </div>
-                                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right transportDiv">
-                                                                <i class="fa fa-plane" data-toggle="tooltip" title="Di chuyển bằng Máy bay"></i><i class="fa fa-bus" data-toggle="tooltip" title="Di chuyển bằng Ô tô"></i>
-                                                            </div>
-                                                        </div>
+                        @foreach (var item in _datatourtypequocte)
+                        {
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
+                                    <a href="#">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemContainer">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
+                                                <div class="ribbonContainerOuter">
+                                                    <div class="ribbonContainerInner">
+                                                        <span class="v-ribbon"><h1></h1></span>
                                                     </div>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-5 cardItemDepartDiv">
-                                                        <span>
-                                                            <i class="glyphicon glyphicon-calendar"></i> KH: Khởi hành thứ 4 hằng tuần Tháng 9,10,11,12.
+                                                </div>
+                                                <figure>
+                                                    <picture>
+                                                        <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/05/11/14/seoul-500x313.jpg">
+                                                        <img class="img-responsive" src="//cdn2.ivivu.com/2016/05/11/14/seoul-360x225.jpg">
+                                                    </picture>
+                                                </figure>
+                                                <div class="cardItemPriceDivOuter">
+                                                    <div class="cardItemPriceDivInner">
+                                                        <span class="cardItemPriceAfterDiscount"><i class="glyphicon glyphicon-map-marker"></i>
+                                                            @{int i = 0;
+                                                            string at = string.Empty;
+                                                            }
+                                                            @foreach (var t in item.TourPlaces)
+                                                            {
+                                                                string _hsd = ", ";
+
+                                                                if ((i + 1) == item.TourPlaces.Count)
+                                                                {
+                                                                    at += t.Place.Name + _hsd;
+                                                                }
+                                                                i++;
+                                                            }
+                                                            @at
                                                         </span>
                                                     </div>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemPrice">
-                                                        <span class="price vcolor-info">9.999.000 VND</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemContent">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10 cardItemTourNameDiv">
+                                                        <span class="cardItemTourName">@item.Name</span>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemTourDetailDiv">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10">
+                                                            <div class="row">
+                                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                                    <span><i class="glyphicon glyphicon-time" data-toggle="tooltip" title="Thời lượng tour"></i> 
+                                                                    @item.Numberday </span>
+                                                                </div>
+                                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right transportDiv">
+                                                                    @foreach (var ab in item.TourTransports)
+                                                                    {
+                                                                        <i class="fa @ab.Transport.Icon" data-toggle="tooltip" title="@ab.Transport.Name"></i>
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-5 cardItemDepartDiv">
+                                                            <span>
+                                                                <i class="glyphicon glyphicon-calendar"></i> @item.Notes
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemPrice">
+                                                            <span class="price vcolor-info">@String.Format("{0:0,0}", item.Prices).Replace(",", ".") VND</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        }
+                        
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
                                 <a href="#">
@@ -730,6 +836,76 @@
                         </a>
                     </h3>
                     <div class="row">
+                    @foreach (var itm in _datatourtypetrongnuoc)
+                    {
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
+                                <a href="#">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemContainer">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
+                                            <figure>
+                                                <picture>
+                                                    <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2015/05/12/17/dao-nam-du-nhtravel-1--500x313.jpg">
+                                                    <img class="img-responsive" src="//cdn2.ivivu.com/2015/05/12/17/dao-nam-du-nhtravel-1--360x225.jpg">
+                                                </picture>
+                                            </figure>
+                                            <div class="cardItemPriceDivOuter">
+                                                <div class="cardItemPriceDivInner">
+                                                    <span class="cardItemPriceAfterDiscount"><i class="glyphicon glyphicon-map-marker"></i> 
+                                                        @{int i = 0;
+                                                        string at = string.Empty;
+                                                        }
+                                                        @foreach (var t in itm.TourPlaces)
+                                                        {
+                                                            string _hsd = ", ";
+
+                                                            if ((i + 1) == itm.TourPlaces.Count)
+                                                            {
+                                                                at += t.Place.Name + _hsd;
+                                                            }
+                                                            i++;
+                                                        }
+                                                        @at
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemContent">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10 cardItemTourNameDiv">
+                                                    <span class="cardItemTourName">@itm.Name</span>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemTourDetailDiv">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                                <span><i class="glyphicon glyphicon-time" data-toggle="tooltip" title="Thời lượng tour"></i> @itm.Numberday </span>
+                                                            </div>
+                                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right transportDiv">
+                                                                @foreach (var ab in itm.TourTransports)
+                                                                {
+                                                                    <i class="fa @ab.Transport.Icon" data-toggle="tooltip" title="@ab.Transport.Name"></i>
+                                                                }
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-5 cardItemDepartDiv">
+                                                        <span>
+                                                            <i class="glyphicon glyphicon-calendar"></i> @itm.Notes
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemPrice">
+                                                        <span class="price vcolor-info">@String.Format("{0:0,0}", itm.Prices).Replace(",", ".") VND</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
                                 <a href="#">
@@ -1024,7 +1200,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding tourHomeContainer ">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
                     <h3 class="localHeadLine hasLine">
-                        <a href="https://www.ivivu.com/du-lich/tat-ca-tour">
+                        <a href="#">
                             <span>
                                 Tours mới tại Thiennhantourist
                             </span>
@@ -1033,54 +1209,78 @@
                         </a>
                     </h3>
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
-                                <a href="/du-lich/tour-dao-diep-son-2n2d-ban-dao-dam-mon-hai-dang-dai-lanh/630">
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemContainer">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
-                                            <figure>
-                                                <picture>
-                                                    <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/02/26/15/dao-diep-son-500x313.jpg">
-                                                    <img class="img-responsive" src="//cdn2.ivivu.com/2016/02/26/15/dao-diep-son-360x225.jpg">
-                                                </picture>
-                                            </figure>
-                                            <div class="cardItemPriceDivOuter">
-                                                <div class="cardItemPriceDivInner">
-                                                    <span class="cardItemPriceAfterDiscount"><i class="glyphicon glyphicon-map-marker"></i> Nha Trang, Phú Yên</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemContent">
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
-                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10 cardItemTourNameDiv">
-                                                    <span class="cardItemTourName">Tour Đảo Điệp Sơn 2N2Đ: Bán Đảo Đầm Môn - Đại Lãnh</span>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemTourDetailDiv">
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10">
-                                                        <div class="row">
-                                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                                <span><i class="glyphicon glyphicon-time" data-toggle="tooltip" title="Thời lượng tour"></i> 2 Ngày 2 Đêm </span>
-                                                            </div>
-                                                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right transportDiv">
-                                                                <i class="fa fa-bus" data-toggle="tooltip" title="Di chuyển bằng Ô tô"></i><i class="fa icon-boat" data-toggle="tooltip" title="Di chuyển bằng Tàu thủy"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-5 cardItemDepartDiv">
-                                                        <span>
-                                                            <i class="glyphicon glyphicon-calendar"></i> KH: 9/9, 23/9, 7/10, 21/10
+                        @foreach (var item in _datatourtypegiadinh)
+                        {
+                            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
+                                    <a href="/du-lich/tour-dao-diep-son-2n2d-ban-dao-dam-mon-hai-dang-dai-lanh/630">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemContainer">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
+                                                <figure>
+                                                    <picture>
+                                                        <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/02/26/15/dao-diep-son-500x313.jpg">
+                                                        <img class="img-responsive" src="//cdn2.ivivu.com/2016/02/26/15/dao-diep-son-360x225.jpg">
+                                                    </picture>
+                                                </figure>
+                                                <div class="cardItemPriceDivOuter">
+                                                    <div class="cardItemPriceDivInner">
+                                                        <span class="cardItemPriceAfterDiscount"><i class="glyphicon glyphicon-map-marker"></i> 
+                                                        
+                                                            @{int i = 0;
+                                                            string at = string.Empty;
+                                                            }
+                                                            @foreach (var t in item.TourPlaces)
+                                                            {
+                                                                string _hsd = ", ";
+
+                                                                if ((i + 1) == item.TourPlaces.Count)
+                                                                {
+                                                                    at += t.Place.Name + _hsd;
+                                                                }
+                                                                i++;
+                                                            }
+                                                            @at
                                                         </span>
                                                     </div>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemPrice">
-                                                        <span class="price vcolor-info">1.790.000 VND</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemContent">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10 cardItemTourNameDiv">
+                                                        <span class="cardItemTourName">@item.Name</span>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemTourDetailDiv">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10">
+                                                            <div class="row">
+                                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                                    <span><i class="glyphicon glyphicon-time" data-toggle="tooltip" title="Thời lượng tour"></i> </span>
+                                                                </div>
+                                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right transportDiv">
+                                                                   
+                                                                    @foreach (var ab in item.TourTransports)
+                                                                    {
+                                                                        <i class="fa @ab.Transport.Icon" data-toggle="tooltip" title="@ab.Transport.Name"></i>
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-5 cardItemDepartDiv">
+                                                            <span>
+                                                                <i class="glyphicon glyphicon-calendar"></i> @item.Notes
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemPrice">
+                                                            <span class="price vcolor-info">@String.Format("{0:0,0}", item.Prices).Replace(",", ".") VND</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        }
+                       
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
                                 <a href="/du-lich/tour-ly-son-4n3d-dao-be-vuong-quoc-toi/635">
@@ -1336,6 +1536,8 @@
                         </a>
                     </h3>
                     <div class="row">
+                    @foreach (var item in _datatourtypegiadinh)
+                    {
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
                                 <a href="/du-lich/tour-thai-lan-4n3d-bangkok-pattaya/638">
@@ -1356,7 +1558,7 @@
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemContent">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10 cardItemTourNameDiv">
-                                                    <span class="cardItemTourName">Tour Thái Lan 4N3Đ: Bangkok - Pattaya</span>
+                                                    <span class="cardItemTourName">@item.Name</span>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemTourDetailDiv">
                                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-10">
@@ -1365,17 +1567,21 @@
                                                                 <span><i class="glyphicon glyphicon-time" data-toggle="tooltip" title="Thời lượng tour"></i> 4 Ngày 3 Đêm </span>
                                                             </div>
                                                             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right transportDiv">
-                                                                <i class="fa fa-plane" data-toggle="tooltip" title="Di chuyển bằng Máy bay"></i><i class="fa fa-bus" data-toggle="tooltip" title="Di chuyển bằng Ô tô"></i>
+                                                                @foreach (var ab in item.TourTransports)
+                                                                {
+                                                                    <i class="fa @ab.Transport.Icon" data-toggle="tooltip" title="@ab.Transport.Name"></i>
+                                                                }
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 v-margin-bottom-5 cardItemDepartDiv">
                                                         <span>
-                                                            <i class="glyphicon glyphicon-calendar"></i> KH: Thứ 5 hằng tuần.
+                                                            <i class="glyphicon glyphicon-calendar"></i> @item.Notes
                                                         </span>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItemPrice">
-                                                        <span class="price vcolor-info">5.680.000 VND</span>
+                                                        <span class="price vcolor-info">@String.Format("{0:0,0}", item.Prices).Replace(",", ".") VND</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1384,6 +1590,8 @@
                                 </a>
                             </div>
                         </div>
+                    }
+                       
                         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
                                 <a href="/du-lich/tour-singapore-malaysia-du-lich-2-nuoc/544">
@@ -1491,7 +1699,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding tourHomeContainer popularTourContainer ">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
                 <h3 class="localHeadLine hasLine">
-                    <a href="/du-lich/tat-ca-diem-den">
+                    <a href="#">
                         <span>Các điểm du lịch phổ biến</span>
                         <span class="readMoreTours hidden-xs">XEM TẤT CẢ <i class="glyphicon glyphicon-chevron-right"></i></span>
                         <span class="clearfix"></span>

@@ -14,9 +14,18 @@ namespace DAL.Models
     
     public partial class Place
     {
+        public Place()
+        {
+            this.TourPlaces = new HashSet<TourPlace>();
+        }
+    
         public int ID { get; set; }
         public string Name { get; set; }
         public Nullable<System.DateTime> Adddate { get; set; }
         public Nullable<int> Type { get; set; }
+        public string Images { get; set; }
+        public Nullable<int> Istop { get; set; }
+    
+        public virtual ICollection<TourPlace> TourPlaces { get; set; }
     }
 }

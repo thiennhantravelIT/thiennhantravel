@@ -19,6 +19,7 @@ namespace DAL.Models
             this.BookingDetails = new HashSet<BookingDetail>();
             this.Images = new HashSet<Image>();
             this.TourAttributes = new HashSet<TourAttribute>();
+            this.TourPlaces = new HashSet<TourPlace>();
             this.TourTransports = new HashSet<TourTransport>();
         }
     
@@ -46,6 +47,7 @@ namespace DAL.Models
         public virtual Category Category { get; set; }
         public virtual ICollection<Image> Images { get; set; }
         public virtual ICollection<TourAttribute> TourAttributes { get; set; }
+        public virtual ICollection<TourPlace> TourPlaces { get; set; }
         public virtual ICollection<TourTransport> TourTransports { get; set; }
     }
 }

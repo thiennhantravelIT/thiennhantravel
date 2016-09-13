@@ -8,43 +8,46 @@ namespace DAL
 {
    public class TourModels
    {
-        public static List<Tour> GetListRecentTour(List<int> IdTour)
+        public static List<Tour> GetListRecentTour(List<int> IdTour,int limit=6)
        {
            using (thiennhanEntities conn = new thiennhanEntities())
            {
                var _data = (from to in conn.Tours
                             where IdTour.Contains(to.ID)
-                            select to).ToList();
+                            orderby to.Adddate descending
+                            select to).Take(limit).ToList();
                return _data;
            }
        }
-        public static List<Tour> GetListRecentTourPromotions()
+        public static List<Tour> GetListRecentTourPromotions(int limit=6)
         {
             using (thiennhanEntities conn = new thiennhanEntities())
             {
                 var _data = (from to in conn.Tours
                              where to.Percentpromotion!=0
-                             select to).ToList();
+                             orderby to.Adddate descending
+                             select to).Take(limit).ToList();
                 return _data;
             }
         }
-        public static List<Tour> GetListRecentTourbyType(int Type)
+        public static List<Tour> GetListRecentTourbyType(int Type,int limit=6)
         {
             using (thiennhanEntities conn = new thiennhanEntities())
             {
                 var _data = (from to in conn.Tours
                              where to.Type == Type
-                             select to).ToList();
+                             orderby to.Adddate descending
+                             select to).Take(limit).ToList();
                 return _data;
             }
         }
-        public static List<Tour> GetListRecentTourbynew()
+        public static List<Tour> GetListRecentTourbynew(int limit=6)
         {
             using (thiennhanEntities conn = new thiennhanEntities())
             {
                 var _data = (from to in conn.Tours
                              orderby to.Adddate descending
-                             select to).ToList();
+                             select to).Take(limit).ToList();
                 return _data;
             }
         }
