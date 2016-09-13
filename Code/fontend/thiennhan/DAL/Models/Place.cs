@@ -17,5 +17,6 @@ namespace DAL.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public Nullable<System.DateTime> Adddate { get; set; }
+        public Nullable<int> Type { get; set; }
     }
 }

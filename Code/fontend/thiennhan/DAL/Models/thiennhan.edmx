@@ -76,6 +76,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="250" />
           <Property Name="Adddate" Type="datetime" />
+          <Property Name="Type" Type="int" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -107,6 +108,9 @@
           <Property Name="DesSeo" Type="nvarchar" MaxLength="250" />
           <Property Name="Keyword" Type="nvarchar" MaxLength="250" />
           <Property Name="IDCategory" Type="int" />
+          <Property Name="Prices" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Percentpromotion" Type="int" />
+          <Property Name="Type" Type="int" />
         </EntityType>
         <EntityType Name="TourAttribute">
           <Key>
@@ -358,6 +362,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Adddate" Type="DateTime" Precision="3" />
+          <Property Name="Type" Type="Int32" />
         </EntityType>
         <EntityType Name="Tour">
           <Key>
@@ -384,6 +389,9 @@
           <NavigationProperty Name="Images" Relationship="thiennhanModel.FK_Images_Tour" FromRole="Tour" ToRole="Image" />
           <NavigationProperty Name="TourAttributes" Relationship="thiennhanModel.FK_TourAttribute_Tour" FromRole="Tour" ToRole="TourAttribute" />
           <NavigationProperty Name="TourTransports" Relationship="thiennhanModel.FK_TourTransport_Tour" FromRole="Tour" ToRole="TourTransport" />
+          <Property Name="Prices" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Percentpromotion" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
         </EntityType>
         <EntityType Name="TourAttribute">
           <Key>
@@ -648,6 +656,7 @@
           <EntitySetMapping Name="Places">
             <EntityTypeMapping TypeName="thiennhanModel.Place">
               <MappingFragment StoreEntitySet="Place">
+                <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Adddate" ColumnName="Adddate" />
@@ -657,6 +666,9 @@
           <EntitySetMapping Name="Tours">
             <EntityTypeMapping TypeName="thiennhanModel.Tour">
               <MappingFragment StoreEntitySet="Tour">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Percentpromotion" ColumnName="Percentpromotion" />
+                <ScalarProperty Name="Prices" ColumnName="Prices" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Body" ColumnName="Body" />

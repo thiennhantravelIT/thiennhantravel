@@ -38,6 +38,9 @@ namespace DAL.Models
         public string DesSeo { get; set; }
         public string Keyword { get; set; }
         public Nullable<int> IDCategory { get; set; }
+        public Nullable<decimal> Prices { get; set; }
+        public Nullable<int> Percentpromotion { get; set; }
+        public Nullable<int> Type { get; set; }
     
         public virtual ICollection<BookingDetail> BookingDetails { get; set; }
         public virtual Category Category { get; set; }
