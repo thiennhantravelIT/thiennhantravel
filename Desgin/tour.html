@@ -23,42 +23,13 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/jquery/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($){
-            $('#type-search').on('click',function(){ 
-                data = '<div class="respdata"><li><i class="glyphicon glyphicon-map-marker"></i><strong> Địa điểm</strong></li><li><a href="#">Đà Lạt</a></li><li><a href="#">Nha Trang</a></li><li><a href="#">Vũng tàu</a></li><li><a href="#">Đà Nẵng</a></li><li><a href="#">Phan Thiết</a></li><li><a href="#">Hạ Long</a></li></div>';
-                data1 = '<div class="respdata"><li><i class="glyphicon glyphicon-map-marker"></i><strong> Địa điểm</strong></li><li><a href="#">Đà Lạt</a></li><li><a href="#">Nha Trang</a></li><li><a href="#">Vũng tàu</a></li><li><a href="#">Đà Nẵng</a></li><li><a href="#">Phan Thiết</a></li><li><a href="#">Hạ Long</a></li><li><i class="glyphicon glyphicon-tree-deciduous"></i><strong> Tours</strong></li><li><a href="#">Tours nội thành Đà Lạt</a></li><li><a href="#">Tour Đà Lạt - Nha Trang 2 ngày 1 đêm</a></li></div>';
-                if($(this).val() == ''){
-                    $('.search-form').append(data);
-                }
-                if($(this).val() != ''){
-                    $('.search-form').append(data1);
-                }
-                $('#type-search').on('input',function(e){
-                    if($(this).data('lastval')!= $(this).val()){
-                        $(this).data('lastval',$(this).val());
-                        var qr = $(this).val();
-                        if(qr != ''){
-                            $('.search-form').append(data1);
-                        }else{
-                            if(qr == ''){
-                                $('.respdata').remove();
-                                $('.search-form').append(data);
-                            }
-                        }
-                    }
-                });
-            });
-            $('#type-search').on('blur',function(){
-                $('.respdata').remove();
-            });
-        });
-    </script>
+    <script src="js/tours/tours.js"></script>
 </head>
 <body data-page="homepage" class="homePage">
 	<header>
 	</header>
 	<div class="main-content">
+        <div class="row"><a href="/trang-chu">Trang chủ</a><span>›</span><a href="/tours">tours</a></div>
         <div class="col-xs-3 tour-search">
             <div class="tour-search-section">
                 <h3 class="nomartop">Tìm Tours</h3>
