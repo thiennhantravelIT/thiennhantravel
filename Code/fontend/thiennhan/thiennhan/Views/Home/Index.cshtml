@@ -5,7 +5,7 @@
     List<Tour> _datatourtypetrongnuoc = ViewBag.tourtypetrongnuoc as List<Tour>;
     List<Tour> _datatourtypequocte = ViewBag.tourtypequocte as List<Tour>;
     List<Tour> _datatourtypegiadinh = ViewBag.tourtypegiadinh as List<Tour>;
-   
+    List<Place> _dataplaceout = ViewBag.placepout as List<Place>;
 }
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 recentSearch">
     <div class="container">
@@ -111,8 +111,8 @@
                                                     <picture>
                                                         @*<source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--500x313.jpg">
                                                         <img class="img-responsive" src="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--360x225.jpg">*@
-                                                        <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--500x313.jpg">
-                                                        <img class="img-responsive" src="//cdn2.ivivu.com/2016/05/06/10/bangkok-thai-lan-1--360x225.jpg">
+                                                        <source media="(max-width: 1200px)" srcset="@item.Images.Where(p=>p.Type==1).SingleOrDefault().big">
+                                                        <img class="img-responsive" src="@item.Images.Where(p=>p.Type==1).SingleOrDefault().normal">
                                                     </picture>
                                                 </figure>
                                                 <div class="cardItemPriceDivOuter">
@@ -518,8 +518,10 @@
                                                 </div>
                                                 <figure>
                                                     <picture>
-                                                        <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/05/11/14/seoul-500x313.jpg">
-                                                        <img class="img-responsive" src="//cdn2.ivivu.com/2016/05/11/14/seoul-360x225.jpg">
+                                                        @*<source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/05/11/14/seoul-500x313.jpg">
+                                                        <img class="img-responsive" src="//cdn2.ivivu.com/2016/05/11/14/seoul-360x225.jpg">*@
+                                                        <source media="(max-width: 1200px)" srcset="@item.Images.Where(p=>p.Type==1).SingleOrDefault().big">
+                                                        <img class="img-responsive" src="@item.Images.Where(p=>p.Type==1).SingleOrDefault().normal">
                                                     </picture>
                                                 </figure>
                                                 <div class="cardItemPriceDivOuter">
@@ -844,8 +846,10 @@
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
                                             <figure>
                                                 <picture>
-                                                    <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2015/05/12/17/dao-nam-du-nhtravel-1--500x313.jpg">
-                                                    <img class="img-responsive" src="//cdn2.ivivu.com/2015/05/12/17/dao-nam-du-nhtravel-1--360x225.jpg">
+                                                    @*<source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2015/05/12/17/dao-nam-du-nhtravel-1--500x313.jpg">
+                                                    <img class="img-responsive" src="//cdn2.ivivu.com/2015/05/12/17/dao-nam-du-nhtravel-1--360x225.jpg">*@
+                                                    <source media="(max-width: 1200px)" srcset="@itm.Images.Where(p => p.Type == 1).SingleOrDefault().big">
+                                                    <img class="img-responsive" src="@itm.Images.Where(p => p.Type == 1).SingleOrDefault().normal">
                                                 </picture>
                                             </figure>
                                             <div class="cardItemPriceDivOuter">
@@ -1217,8 +1221,10 @@
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
                                                 <figure>
                                                     <picture>
-                                                        <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/02/26/15/dao-diep-son-500x313.jpg">
-                                                        <img class="img-responsive" src="//cdn2.ivivu.com/2016/02/26/15/dao-diep-son-360x225.jpg">
+                                                        @*<source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/02/26/15/dao-diep-son-500x313.jpg">
+                                                        <img class="img-responsive" src="//cdn2.ivivu.com/2016/02/26/15/dao-diep-son-360x225.jpg">*@
+                                                        <source media="(max-width: 1200px)" srcset="@item.Images.Where(p => p.Type == 1).SingleOrDefault().big">
+                                                        <img class="img-responsive" src="@item.Images.Where(p => p.Type == 1).SingleOrDefault().normal">
                                                     </picture>
                                                 </figure>
                                                 <div class="cardItemPriceDivOuter">
@@ -1528,7 +1534,7 @@
                     <h3 class="localHeadLine hasLine">
                         <a href="">
                             <span>
-                                Tour du lịch dành cho gia đình 2016
+                                Tour du lịch dành cho gia đình @DateTime.Now.Year
                             </span>
                             <span class="readMoreTours hidden-xs">XEM THÊM TOURS <i class="glyphicon glyphicon-chevron-right"></i></span>
                             <span class="clearfix"></span>
@@ -1544,8 +1550,10 @@
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
                                             <figure>
                                                 <picture>
-                                                    <source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/06/01/16/tiger-zoo-500x313.jpg">
-                                                    <img class="img-responsive" src="//cdn2.ivivu.com/2016/06/01/16/tiger-zoo-360x225.jpg">
+                                                    @*<source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/06/01/16/tiger-zoo-500x313.jpg">
+                                                    <img class="img-responsive" src="//cdn2.ivivu.com/2016/06/01/16/tiger-zoo-360x225.jpg">*@
+                                                    <source media="(max-width: 1200px)" srcset="@item.Images.Where(p => p.Type == 1).SingleOrDefault().big">
+                                                    <img class="img-responsive" src="@item.Images.Where(p => p.Type == 1).SingleOrDefault().normal">
                                                 </picture>
                                             </figure>
                                             <div class="cardItemPriceDivOuter">
@@ -1731,6 +1739,35 @@
                                     </a>
                                 </div>
                             </div>
+                            @foreach (var item in _dataplaceout)
+                            {
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
+                                        <a href="/du-lich/tour-campuchia">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemContainer">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding cardItemImage">
+                                                    <figure>
+                                                        <picture>
+                                                            @*<source media="(max-width: 1200px)" srcset="//cdn2.ivivu.com/2016/02/25/10/angkor-wat9-500x313.jpg">
+                                                            <img src="//cdn2.ivivu.com/2016/02/25/10/angkor-wat9-360x225.jpg" class="img-responsive">*@
+                                                            <source media="(max-width: 1200px)" srcset="@item.Images">
+                                                            <img src="//cdn2.ivivu.com/2016/02/25/10/angkor-wat9-360x225.jpg" class="img-responsive">
+                                                        </picture>
+                                                    </figure>
+                                                    <div class="cardItemPriceDivOuter">
+                                                        <div class="cardItemPriceDivInner">
+                                                            <span class="cardItemPriceAfterDiscount">
+                                                                <span><i class="glyphicon glyphicon-map-marker"></i> @item.Name</span>
+                                                               
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            }
                             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cardItem">
                                     <a href="/du-lich/tour-campuchia">

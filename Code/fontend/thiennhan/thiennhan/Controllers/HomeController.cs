@@ -16,7 +16,7 @@ namespace thiennhan.Controllers
            ViewBag.tourtypequocte = TourHelpers.GetListRecentTourbyType(1);
            ViewBag.tourtypegiadinh = TourHelpers.GetListRecentTourbyType(2);
            ViewBag.placepout = PlaceHelpers.Getplacepopular();
-
+           ViewBag.placetop = PlaceHelpers.GetplacepopularTop();
             return View();
         }
 
